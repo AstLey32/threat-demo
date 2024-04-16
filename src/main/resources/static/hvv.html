@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>银针情报平台-HVV资讯</title>
+<meta name="description" content="银针情报平台 | HVV资讯" />
+<meta name="keywords" content="银针情报平台 | HVV资讯" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+
+<body>
+
+<div class="main" style="background: #e5f0f7; width: 80%; text-align: center">
+    <h1 class="title">银针情报平台 | HVV资讯</h1>
+    <div id="vulnInfo" class="listInfo" style="background: #f5e0e7">
+        <h2> 漏洞情报</h2>
+        <div id="vulnList" style="text-align: left">无情报</div>
+        <button onclick="addInfo('vuln')" style="margin: 2%">新增</button>
+    </div>
+    <div id="iocInfo" class="listInfo" style="background: #f5f0e7">
+        <h2> IOC情报</h2>
+        <div id="iocList" style="text-align: left">无情报</div>
+        <button onclick="addInfo('ioc')" style="margin: 2%">新增</button>
+    </div>
+    <div id="insideInfo" class="listInfo" style="background: #e5f0e7">
+        <h2> 协防情报</h2>
+        <div id="insideList" style="text-align: left">无情报</div>
+        <button onclick="addInfo('inside')" style="margin: 2%">新增</button>
+    </div>
+    <div id="addInfo" class="addInfo" style="display:none">
+        <h2 style="text-align: center"> 新增情报</h2>
+        <div  style="margin: 0 0 2% 5%;">
+            <label> 类型：</label>
+            <div id="kind" style="display:inline; position: absolute; left: 30%"> </div>
+        </div>
+        <div  style="margin: 0 0 2% 5%;">
+            <label> 标题：
+                <input style="position: absolute; left: 30%" id="title">
+            </label>
+        </div>
+        <div  style="margin: 0 0 2% 5%;">
+            <label> 来源地址：
+                <input style="position: absolute; left: 30%" id="source">
+            </label>
+        </div>
+        <div  style="margin: 0 0 2% 5%;">
+            <label> 详细信息：
+                <input style="position: absolute; left: 30%" id="detail">
+            </label>
+        </div>
+        <div  style="margin: 0 0 5% 0; text-align: center">
+            <button onclick="closeAddInfo(true)"> 确认 </button>
+            <button onclick="closeAddInfo(false)"> 取消 </button>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    div.listInfo {
+        display: inline-block;
+        vertical-align: top;
+        width: 31%;
+        margin: 1%;
+    }
+    div.addInfo {
+        background: #EEFFFF;
+        width: 30%;
+        position: absolute;
+        left: 25%;
+        top: 15%;
+        text-align: left;
+    }
+</style>
+
+<script type="application/javascript">
+    window.onload = queryAll();
+    let addKind = '';
+    let hvvinfos = [];
+
+    function queryAll() {
+        data('vuln');
+        data('ioc');
+        data('inside');
+    }
+
+    function data(kind) {
+        const tbody = document.getElementById(kind + 'List');
+        while (tbody.hasChildNodes()) {
+            tbody.removeChild(tbody.firstChild);
+        }
+        const request = new XMLHttpRequest();
+        request.open("GET", "/hvvinfo?kind=" + kind);
+        tbody.innerHTML = "加载中，请稍候...";
+        request.onload = function () {
+            if (request.status === 200) {
+                tbody.innerHTML = '';
+                const res = JSON.parse(request.response);
+                for (let i = 0; i < res.length; i++) {
+                    console.log(res[i]);
+                    hvvinfos.push(res[i]);
+                    const childNode = document.createElement('div');
+                    const infoNode = document.createElement('div');
+                    const infoNodeOri = document.createElement('a');
+                    infoNodeOri.innerHTML = '查看';
+                    infoNodeOri.setAttribute('style', 'display: inline-block;float: right;margin-right: 10%;');
+                    infoNodeOri.setAttribute('href', 'javascript:showInfo(' + res[i].id + ')');
+                    infoNode.setAttribute('style', 'display: inline-block;margin-left: 10%;width: 70%;text-overflow: ellipsis;');
+                    infoNode.innerHTML = res[i].title;
+                    childNode.appendChild(infoNode);
+                    childNode.appendChild(infoNodeOri);
+                    tbody.appendChild(childNode);
+                }
+            } else {
+                tbody.innerHTML = '加载出错！请重试...';
+            }
+        }
+        request.send();
+    }
+    function addInfo(kind) {
+        addKind = kind
+        document.getElementById('addInfo').setAttribute('style','display:block');
+        document.getElementById('kind').innerHTML =
+            kind === 'vuln' ? '漏洞情报' :
+                kind === 'ioc' ? 'IOC情报' :
+                    kind === 'inside' ? '协防情报' : '';
+    }
+
+    function closeAddInfo(isOK) {
+        const infoTitle = document.getElementById('title');
+        const infoSource = document.getElementById('source');
+        const infoDetail = document.getElementById('detail');
+        if (isOK) {
+            var info = {
+                'title': infoTitle.value,
+                'href': infoSource.value,
+                'poster': infoSource.value,
+                'category': addKind,
+                'mark': 'HW',
+                'titlecn': infoDetail.value
+            }
+            console.log(info);
+            const request = new XMLHttpRequest();
+            request.open("POST", "/hvvaddinfo");
+            request.setRequestHeader('Content-Type','application/json');
+            request.onload = function() {
+                if (request.status === 200) {
+                    console.log('ok');
+                }
+            }
+            request.send(JSON.stringify(info));
+        }
+        infoTitle.value = ''
+        infoSource.value = ''
+        infoDetail.value = ''
+        document.getElementById('addInfo').setAttribute('style','display:none');
+        document.getElementById('kind').innerHTML = '';
+    }
+
+    function showInfo(id) {
+        let isShowInfo = false;
+        for (let i in hvvinfos) {
+            if (hvvinfos[i].id === id) {
+                if (hvvinfos[i].poster.startsWith("http")) {
+                    window.open(hvvinfos[i].poster,"_blank");
+                } else {
+                    alert(hvvinfos[i].titlecn);
+                }
+                isShowInfo = true;
+                break;
+            }
+        }
+        if (!isShowInfo) {
+            alert("showInfo error!");
+        }
+    }
+
+</script>
+
+</body>
+</html>

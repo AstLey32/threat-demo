@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sliverneedle.threatdemo.mapper.KeyWordsMapper">
+
+    <resultMap id="resultMap" type="com.sliverneedle.threatdemo.domain.KeyWords">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="keywords" column="keywords" jdbcType="VARCHAR"/>
+            <result property="points" column="points" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <select id="selectAllKeyWords" resultMap="resultMap">
+        SELECT *
+        FROM "key_words"
+    </select>
+
+    <select id="selectNormalKeyWords" resultMap="resultMap">
+        SELECT *
+        FROM "key_words"
+        WHERE points > 0
+    </select>
+
+    <select id="selectHotSearchKeyWords" resultMap="resultMap">
+        SELECT *
+        FROM "key_words"
+        WHERE points = 0
+    </select>
+
+    <select id="selectKeyWords" parameterType="java.lang.Long" resultMap="resultMap">
+        SELECT *
+        FROM "key_words"
+        WHERE "id"=#{keyWordsId}
+    </select>
+
+    <insert id="createKeyWordsList" parameterType="java.util.List">
+        INSERT INTO "key_words" ("keywords", "points") VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.keywords,jdbcType=VARCHAR},#{item.points,jdbcType=INTEGER})
+        </foreach>
+    </insert>
+
+    <update id="updateKeyWords" parameterType="com.sliverneedle.threatdemo.domain.KeyWords">
+        UPDATE "key_words"
+        <set> SET
+            <if test='keywords != null'>
+                "keywords"=#{keywords,jdbcType=VARCHAR},
+            </if>
+            <if test='points != null'>
+                "points"=#{points,jdbcType=INTEGER}
+            </if>
+        </set>
+        WHERE "id"=#{keyWordsId,jdbcType=BIGINT}
+    </update>
+
+    <update id="updateKeyWordsList" parameterType="java.util.List">
+        <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+            UPDATE "key_words"
+            <set> SET
+                <if test='item.keywords != null'>
+                    "keywords"=#{item.keywords,jdbcType=VARCHAR},
+                </if>
+                <if test='item.points != null'>
+                    "points"=#{item.points,jdbcType=INTEGER}
+                </if>
+            </set>
+            WHERE
+            "id" = #{item.id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+
+    <delete id="deleteKeyWords" parameterType="java.lang.Long">
+        DELETE
+        FROM "key_words"
+        WHERE "id"=#{keyWordsId}
+    </delete>
+
+    <delete id="deleteKeyWordsList" parameterType="java.util.List">
+        DELETE
+        FROM "key_words"
+        WHERE "id" IN
+        <foreach collection="list" item="item" open="(" separator="," close=")">
+            #{item.id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+</mapper>

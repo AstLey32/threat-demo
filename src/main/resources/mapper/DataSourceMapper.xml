@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sliverneedle.threatdemo.mapper.DataSourceMapper">
+
+    <resultMap id="resultMap" type="com.sliverneedle.threatdemo.domain.DataSource">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="url" column="url" jdbcType="VARCHAR"/>
+            <result property="rule" column="rule" jdbcType="VARCHAR"/>
+            <result property="poster" column="poster" jdbcType="VARCHAR"/>
+            <result property="category" column="category" jdbcType="VARCHAR"/>
+            <result property="valid" column="valid" jdbcType="BOOLEAN"/>
+    </resultMap>
+
+    <select id="selectAllDataSource" resultMap="resultMap">
+        SELECT *
+        FROM "data_source"
+    </select>
+
+    <select id="selectValidDataSource" resultMap="resultMap">
+        SELECT *
+        FROM "data_source"
+        WHERE "valid"=True
+    </select>
+
+    <select id="selectDataSource" parameterType="java.lang.Long" resultMap="resultMap">
+        SELECT *
+        FROM "data_source"
+        WHERE "id"=#{dataSourceId}
+    </select>
+
+    <insert id="createDataSourceList" parameterType="java.util.List">
+        INSERT INTO "data_source" ("url", "rule", "poster", "category", "valid") VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.url,jdbcType=VARCHAR},#{item.rule,jdbcType=VARCHAR},
+            #{item.poster,jdbcType=VARCHAR},#{item.category,jdbcType=VARCHAR},
+             #{item.valid,jdbcType=BOOL})
+        </foreach>
+    </insert>
+
+    <update id="updateDataSource" parameterType="com.sliverneedle.threatdemo.domain.DataSource">
+        UPDATE "data_source"
+        <set>
+            <if test='url != null'>
+                "url"=#{url,jdbcType=VARCHAR},
+            </if>
+            <if test='rule != null'>
+                "rule"=#{rule,jdbcType=VARCHAR},
+            </if>
+            <if test='poster != null'>
+                "poster"=#{poster,jdbcType=VARCHAR},
+            </if>
+            <if test='category != null'>
+                "category"=#{category,jdbcType=VARCHAR},
+            </if>
+            <if test='valid != null'>
+                "valid"=#{valid,jdbcType=BOOLEAN}
+            </if>
+        </set>
+        WHERE "id"=#{id,jdbcType=BIGINT}
+    </update>
+
+    <update id="updateDataSourceList" parameterType="java.util.List">
+        <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+            UPDATE "data_source"
+            <set>
+                <if test='item.url != null'>
+                    "url"=#{item.url,jdbcType=VARCHAR},
+                </if>
+                <if test='item.rule != null'>
+                    "rule"=#{item.rule,jdbcType=VARCHAR},
+                </if>
+                <if test='poster != null'>
+                    "poster"=#{item.poster,jdbcType=VARCHAR},
+                </if>
+                <if test='category != null'>
+                    "category"=#{item.category,jdbcType=VARCHAR},
+                </if>
+                <if test='valid != null'>
+                    "valid"=#{item.valid,jdbcType=BOOLEAN}
+                </if>
+            </set>
+            WHERE
+            "id" = #{item.id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+
+    <delete id="deleteDataSource" parameterType="java.lang.Long">
+        DELETE
+        FROM "data_source"
+        WHERE "id"=#{dataSourceId}
+    </delete>
+
+    <delete id="deleteDataSourceList" parameterType="java.util.List">
+        DELETE
+        FROM "data_source"
+        WHERE "id" IN
+        <foreach collection="list" item="item" open="(" separator="," close=")">
+            #{item.id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+</mapper>

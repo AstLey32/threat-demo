@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sliverneedle.threatdemo.mapper.SavedInfoMapper">
+
+    <resultMap id="resultMap" type="com.sliverneedle.threatdemo.domain.SavedInfo">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="link" column="link" jdbcType="VARCHAR"/>
+            <result property="poster" column="poster" jdbcType="VARCHAR"/>
+            <result property="category" column="category" jdbcType="VARCHAR"/>
+            <result property="mark" column="mark" jdbcType="VARCHAR"/>
+            <result property="savetime" column="savetime" jdbcType="DATE"/>
+            <result property="titlecn" column="titlecn" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="selectAllSavedInfo" resultMap="resultMap">
+        SELECT *
+        FROM "saved_info"
+    </select>
+
+    <select id="selectNewSavedInfo" parameterType="java.lang.String" resultMap="resultMap">
+        SELECT *
+        FROM "saved_info"
+        WHERE "savetime" >= (now()- INTERVAL ${timeInterval})
+    </select>
+
+    <select id="selectSavedInfo" parameterType="java.lang.Long" resultMap="resultMap">
+        SELECT *
+        FROM "saved_info"
+        WHERE "id"=#{savedInfoId}
+    </select>
+    <select id="selectHWSavedInfo" parameterType="java.lang.String" resultMap="resultMap">
+        SELECT *
+        FROM "saved_info"
+        WHERE "category"=#{kind} and "mark"='HW'
+    </select>
+
+    <insert id="createSavedInfoList" parameterType="java.util.List">
+        INSERT INTO "saved_info" ("title", "link", "poster", "category", "mark", "savetime", "titlecn") VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.title,jdbcType=VARCHAR},#{item.link,jdbcType=VARCHAR},#{item.poster,jdbcType=VARCHAR},#{item.category,jdbcType=VARCHAR},#{item.mark,jdbcType=VARCHAR}, #{item.savetime,jdbcType=DATE}, #{item.titlecn,jdbcType=VARCHAR})
+        </foreach>
+        ON CONFLICT (link) DO NOTHING;
+    </insert>
+
+    <update id="updateSavedInfo" parameterType="com.sliverneedle.threatdemo.domain.SavedInfo">
+        UPDATE "saved_info"
+        <set>
+            <if test='title != null'>
+                "title"=#{title,jdbcType=VARCHAR},
+            </if>
+            <if test='link != null'>
+                "link"=#{link,jdbcType=VARCHAR},
+            </if>
+            <if test='poster != null'>
+                "poster"=#{poster,jdbcType=VARCHAR},
+            </if>
+            <if test='category != null'>
+                "category"=#{category,jdbcType=VARCHAR},
+            </if>
+            <if test='mark != null'>
+                "mark"=#{mark,jdbcType=VARCHAR},
+            </if>
+            <if test='savetime != null'>
+                "savetime"=#{savetime,jdbcType=DATE},
+            </if>
+            <if test='titlecn != null'>
+                "titlecn"=#{titlecn,jdbcType=VARCHAR},
+            </if>
+        </set>
+        WHERE "id"=#{savedInfoId,jdbcType=BIGINT}
+    </update>
+
+    <update id="updateSavedInfoList" parameterType="java.util.List">
+        <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+            UPDATE "saved_info"
+            <set>
+                <if test='item.title != null'>
+                    "title"=#{item.title,jdbcType=VARCHAR},
+                </if>
+                <if test='item.link != null'>
+                    "link"=#{item.link,jdbcType=VARCHAR},
+                </if>
+                <if test='item.poster != null'>
+                    "poster"=#{item.poster,jdbcType=VARCHAR},
+                </if>
+                <if test='item.category != null'>
+                    "category"=#{item.category,jdbcType=VARCHAR},
+                </if>
+                <if test='item.mark != null'>
+                    "mark"=#{item.mark,jdbcType=VARCHAR},
+                </if>
+                <if test='savetime != null'>
+                    "savetime"=#{item.savetime,jdbcType=DATE},
+                </if>
+                <if test='item.titlecn != null'>
+                    "titlecn"=#{item.titlecn,jdbcType=VARCHAR},
+                </if>
+            </set>
+            WHERE
+            "id" = #{item.id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+
+    <delete id="deleteSavedInfo" parameterType="java.lang.Long">
+        DELETE
+        FROM "saved_info"
+        WHERE "id"=#{savedInfoId}
+    </delete>
+
+    <delete id="deleteSavedInfoList" parameterType="java.util.List">
+        DELETE
+        FROM "saved_info"
+        WHERE "id" IN
+        <foreach collection="list" item="item" open="(" separator="," close=")">
+            #{item.id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+</mapper>

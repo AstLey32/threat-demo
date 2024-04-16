@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>银针情报平台-热点资讯</title>
+<meta name="description" content="银针情报平台 | 热点资讯" />
+<meta name="keywords" content="银针情报平台 | 热点资讯" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+
+<body>
+
+<div class="main" style="background: #e5f0f7; width: 80%; text-align: center">
+    <h1 class="title">银针情报平台 | 热点资讯</h1>
+    <div id="info" style="text-align: left"></div>
+    <button id="pageprev" style="display:none" onclick="getPageData(false)">上一页</button>
+    <button id="next" style="display:none" onclick="getMoreData()">展开更多</button>
+    <button id="pagenext" style="display:none" onclick="getPageData(true)">下一页</button>
+    <div id="query">未获取到今日新闻</div>
+    <button id="ins" onclick="getApi('ins')">查询更新</button>
+    <button id="addpastday" onclick="pastDay++;query()">加载更多日期</button>
+    <button id="resetpastday" onclick="pastDay=2;query()">重置查询范围</button>
+</div>
+
+<script type="application/javascript">
+    let currentPage = 1;
+    let currentPoint = 2;
+    let currentPageSize = 0;
+    let pastDay = 2;
+    window.onload = query();
+    function getTranslator(title) {
+        return new Promise(function (resolve, reject) {
+            const req = new XMLHttpRequest();
+            req.open('GET', "/trans?trans=" + title);
+            req.onload = function () {
+                if (req.status === 200) {
+                    resolve(req.response);
+                } else {
+                    reject(Error(req.statusText));
+                }
+            };
+            req.onerror = function () {
+                reject(Error("Network Error"));
+            };
+            req.send();
+        });
+    }
+
+    // for /transall or /ins
+    function getApi(api) {
+        document.getElementById('ins').setAttribute("disabled", null);
+        return new Promise(function (resolve, reject) {
+            const req = new XMLHttpRequest();
+            req.open('GET', '/' + api);
+            req.onload = function () {
+                if (req.status === 200) {
+                    resolve(req.response);
+                    if (api === 'ins') {
+                        getApi('transall');
+                    } else {
+                        alert('查询更新成功！');
+                        document.getElementById('ins').removeAttribute("disabled");
+                    }
+                } else {
+                    reject(Error(req.statusText));
+                    alert('查询更新失败！');
+                    document.getElementById('ins').removeAttribute("disabled");
+                }
+            };
+            req.onerror = function () {
+                reject(Error("Network Error"));
+                document.getElementById('ins').removeAttribute("disabled");
+            };
+            req.send();
+        });
+    }
+
+    function query() {
+        const request = new XMLHttpRequest();
+        request.open("GET", "/query?point=" + currentPoint + "&past=" + pastDay);
+        request.onload = async function () {
+            if (request.status === 200) {
+                currentPage = 1;
+                currentPageSize = parseInt(request.response);
+                if (currentPageSize === 0) {
+                    pastDay++;
+                    query();
+                } else {
+                    data();
+                }
+            }
+        }
+        request.send();
+    }
+
+    function data() {
+        const tbody = document.getElementById('info');
+        while (tbody.hasChildNodes()) {
+            tbody.removeChild(tbody.firstChild);
+        }
+        const request = new XMLHttpRequest();
+        request.open("GET", "/say?point=" + currentPoint + "&page=" + currentPage  + "&past=" + pastDay);
+        request.onload = async function () {
+            if (request.status === 200) {
+                const res = JSON.parse(request.response);
+                document.getElementById('query').innerHTML = "加载中，请稍候...";
+                for (let i = 0; i < res.length; i++) {
+                    const childNode = document.createElement('div');
+                    const infoNode = document.createElement('div');
+                    if (res[i].titlecn === 'No Translation') {
+                        await getTranslator(res[i].title).then(response => {
+                            infoNode.innerHTML = (i + 1) + " " + response + " 【来源：" + res[i].poster + "】";
+                        }, error => {
+                            infoNode.innerHTML = (i + 1) + " " + res[i].title + " 【来源：" + res[i].poster + "】";
+                            console.log(error);
+                        })
+                    } else {
+                        infoNode.innerHTML = (i + 1) + " " + res[i].titlecn + " 【来源：" + res[i].poster + "】";
+                    }
+                    const infoNodeOri = document.createElement('a');
+                    infoNodeOri.setAttribute('href', res[i].link);
+                    infoNodeOri.setAttribute('target', '_blank');
+                    infoNodeOri.innerHTML = res[i].title;
+                    childNode.appendChild(infoNode);
+                    childNode.appendChild(infoNodeOri);
+                    tbody.appendChild(childNode);
+                }
+                document.getElementById('next').setAttribute('style', 'display:inline-block');
+                document.getElementById('query').innerHTML = "当前展示 过去 " + pastDay + " 天 "
+                    + (currentPoint === 0 ? "全部情报" : "热点情报") +
+                    " 第 " + currentPage + " 页 共 " + currentPageSize + " 页";
+                if (currentPageSize === 1) {
+                    document.getElementById('pageprev').setAttribute('style', 'display:none');
+                    document.getElementById('pagenext').setAttribute('style', 'display:none');
+                } else if (currentPage === 1) {
+                    document.getElementById('pageprev').setAttribute('style', 'display:none');
+                    document.getElementById('pagenext').setAttribute('style', 'display:inline-block');
+                } else if (currentPage === currentPageSize) {
+                    document.getElementById('pageprev').setAttribute('style', 'display:inline-block');
+                    document.getElementById('pagenext').setAttribute('style', 'display:none');
+                } else {
+                    document.getElementById('pageprev').setAttribute('style', 'display:inline-block');
+                    document.getElementById('pagenext').setAttribute('style', 'display:inline-block');
+                }
+            }
+        }
+        request.send();
+    }
+
+    function getMoreData() {
+        if (currentPoint === 2) {
+            currentPoint = 0;
+            query();
+            document.getElementById('next').innerHTML = "收起更多";
+        } else {
+            currentPoint = 2;
+            query();
+            document.getElementById('next').innerHTML = "展开更多";
+        }
+    }
+
+    function getPageData(pagePlus) {
+        if (pagePlus) {
+            currentPage++;
+        } else {
+            currentPage--;
+        }
+        data();
+    }
+
+</script>
+
+</body>
+</html>

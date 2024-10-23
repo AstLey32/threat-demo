@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -34,6 +35,10 @@ public class DataPlanController {
                 int insertNum = saveNewInfoService.saveNewInfo(retList);
                 insLog.add(ds.getPoster() + " Insert " + insertNum + " info success!");
             } catch (Exception e) {
+                if (e instanceof UnknownHostException) {
+                    e.printStackTrace();
+                    return insLog;
+                }
                 ds.setValid(Boolean.FALSE);
                 getDatabaseService.updateDataSource(ds);
                 e.printStackTrace();
@@ -41,7 +46,16 @@ public class DataPlanController {
         }
         return insLog;
     }
-    @RequestMapping("/transall")
+
+    @RequestMapping("/refresh_datasource")
+    public void refreshDatasource() {
+        for (DataSource ds: getDatabaseService.getAllDataSource()){
+            ds.setValid(Boolean.TRUE);
+            getDatabaseService.updateDataSource(ds);
+        }
+    }
+
+    @RequestMapping("/trans_all")
     public List<String> transAll() {
         List<String> transLog = new ArrayList<>();
         resolveGetInfoService.init();

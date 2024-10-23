@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>银针情报平台</title>
+<meta name="description" content="终端云银针 | 威胁情报平台" />
+<meta name="keywords" content="终端云银针 | 威胁情报平台" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+
+<body>
+
+<div class="main" style="text-align: center">
+    <h1 class="title">终端云银针 | 威胁情报平台</h1>
+    <div style="width: 100%; text-align: left">
+        <input id="keywords">
+        <button id="search" onclick="doSearch()">搜索</button>
+    </div>
+    <div id="info" style="text-align: left"></div>
+    <div id="query">未查询到结果</div>
+    <button id="reset" onclick="resetSearch()">重置查询</button>
+</div>
+
+<script type="application/javascript">
+    window.onload = query();
+    function getTranslator(title) {
+        return new Promise(function (resolve, reject) {
+            const req = new XMLHttpRequest();
+            req.open('GET', "/trans?trans=" + title);
+            req.onload = function () {
+                if (req.status === 200) {
+                    resolve(req.response);
+                } else {
+                    reject(Error(req.statusText));
+                }
+            };
+            req.onerror = function () {
+                reject(Error("Network Error"));
+            };
+            req.send();
+        });
+    }
+
+    function query() {
+        const param = window.location.search.substring(1);
+        if (param.split('search=').length === 2) {
+            document.getElementById('keywords').value = decodeURI(param.split('search=')[1]);
+            doSearch();
+        } else {
+            resetSearch();
+        }
+    }
+
+    function doSearch() {
+        const tbody = document.getElementById('info');
+        while (tbody.hasChildNodes()) {
+            tbody.removeChild(tbody.firstChild);
+        }
+        const request = new XMLHttpRequest();
+        const keywords = document.getElementById('keywords').value.toLowerCase();
+        request.open("GET", "/search?keywords=" + keywords);
+        request.onload = async function () {
+            if (request.status === 200) {
+                const res = JSON.parse(request.response);
+                document.getElementById('query').innerHTML = "加载中，请稍候...";
+                for (let i = 0; i < res.length; i++) {
+                    const index = i + 1;
+                    const childNode = document.createElement('div');
+                    const infoNode = document.createElement('div');
+                    const source = " 【来源：" + res[i].poster + "】"
+                    const created = " 发布时间：" + res[i].savetime.split('T')[0];
+                    if (res[i].titlecn === 'No Translation') {
+                        await getTranslator(res[i].title).then(response => {
+                            infoNode.innerHTML = index + " " + response + source + created;
+                        }, error => {
+                            infoNode.innerHTML = index + " " + res[i].title + source + created;
+                            console.log(error);
+                        })
+                    } else {
+                        infoNode.innerHTML = index + " " + res[i].titlecn + source + created;
+                    }
+                    const infoNodeTag = document.createElement('div');
+                    infoNodeTag.innerHTML = '标签：' + res[i].category.replaceAll(';','  ');
+                    const infoNodeOri = document.createElement('a');
+                    if (res[i].link.startsWith("http")) {
+                        infoNodeOri.setAttribute('href', res[i].link);
+                        infoNodeOri.setAttribute('target', '_blank');
+                        infoNodeOri.innerHTML = res[i].title;
+                    } else {
+                        infoNode.innerHTML = index + " " + res[i].title + source + created;
+                        infoNodeOri.innerHTML = res[i].titlecn;
+                    }
+                    childNode.appendChild(infoNode);
+                    childNode.appendChild(infoNodeTag);
+                    childNode.appendChild(infoNodeOri);
+                    tbody.appendChild(childNode);
+                }
+                if (res.length === 0) {
+                    document.getElementById('query').innerHTML = "未搜索到结果，您可以访问" +
+                        "<a href='https://x.threatbook.com/v5/generalSearch?baseq=" +
+                        window.btoa(encodeURIComponent(keywords)) + "' target='_blank'> 微步 </a> 进行进一步查询"
+                } else {
+                    document.getElementById('query').innerHTML = "当前展示相关情报 共" + res.length + "条";
+                }
+            }
+        }
+        request.send();
+    }
+
+    function resetSearch() {
+        window.open("/new",'_self');
+    }
+
+</script>
+
+</body>
+</html>

@@ -3,6 +3,7 @@ import requests
 import time
 from . import spider
 
+
 def get_keywords():
     keywords = requests.get('http://127.0.0.1:8080/getHotSearchDict').text
     return json.loads(keywords)
@@ -25,11 +26,20 @@ def weibo():
         if '"_blank">' in line:
             news_list.append(line.split('"_blank">')[1].split('</a>')[0])
 
-    kw_dicts = get_keywords()
+    kw_dicts = []
+    no_kw_dicts = []
+    for i in get_keywords():
+        if i.startswith('-'):
+            no_kw_dicts.append(i[1:])
+        else:
+            kw_dicts.append(i)
     ret = []
     for contentTitle in news_list:
         for kw in kw_dicts:
             if kw in contentTitle:
+                for nkw in no_kw_dicts:
+                    if nkw in contentTitle:
+                        break
                 news = spider.SpiderNews()
                 news.title = contentTitle
                 news.pubDate = time.strftime("%Y-%m-%d-%H:%M", time.localtime(time.time()))

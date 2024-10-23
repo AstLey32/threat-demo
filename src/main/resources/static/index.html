@@ -13,6 +13,23 @@
 
 <div class="main" style="background: #e5f0f7; width: 80%; text-align: center">
     <h1 class="title">银针情报平台 | 热点资讯</h1>
+    <div style="width: 100%">
+        <input id="keywords">
+        <button id="search" onclick="doSearch()">搜索</button>
+    </div>
+    <div>
+        <div style="display:inline-block">选择类别：</div>
+        <select id="category">
+            <option value="1">活跃的事件</option>
+            <option value="0">全部</option>
+            <option value="2">地下活动</option>
+            <option value="3">互联网舆情</option>
+            <option value="4">活跃的漏洞</option>
+            <option value="5">攻防技术</option>
+            <option value="6">IOC</option>
+        </select>
+        <button id="select" onclick="doSelect()">确认</button>
+    </div>
     <div id="info" style="text-align: left"></div>
     <button id="pageprev" style="display:none" onclick="getPageData(false)">上一页</button>
     <button id="next" style="display:none" onclick="getMoreData()">展开更多</button>
@@ -20,7 +37,7 @@
     <div id="query">未获取到今日新闻</div>
     <button id="ins" onclick="getApi('ins')">查询更新</button>
     <button id="addpastday" onclick="pastDay++;query()">加载更多日期</button>
-    <button id="resetpastday" onclick="pastDay=2;query()">重置查询范围</button>
+    <button id="reset" onclick="resetSearch()">重置查询</button>
 </div>
 
 <script type="application/javascript">
@@ -28,6 +45,7 @@
     let currentPoint = 2;
     let currentPageSize = 0;
     let pastDay = 2;
+    let category = 0;
     window.onload = query();
     function getTranslator(title) {
         return new Promise(function (resolve, reject) {
@@ -47,7 +65,7 @@
         });
     }
 
-    // for /transall or /ins
+    // for /trans_all or /ins
     function getApi(api) {
         document.getElementById('ins').setAttribute("disabled", null);
         return new Promise(function (resolve, reject) {
@@ -57,7 +75,7 @@
                 if (req.status === 200) {
                     resolve(req.response);
                     if (api === 'ins') {
-                        getApi('transall');
+                        getApi('trans_all');
                     } else {
                         alert('查询更新成功！');
                         document.getElementById('ins').removeAttribute("disabled");
@@ -77,21 +95,27 @@
     }
 
     function query() {
-        const request = new XMLHttpRequest();
-        request.open("GET", "/query?point=" + currentPoint + "&past=" + pastDay);
-        request.onload = async function () {
-            if (request.status === 200) {
-                currentPage = 1;
-                currentPageSize = parseInt(request.response);
-                if (currentPageSize === 0) {
-                    pastDay++;
-                    query();
-                } else {
-                    data();
+        const param = window.location.search.substring(1);
+        if (param.split('search=').length === 2) {
+            document.getElementById('keywords').value = param.split('search=')[1];
+            doSearch();
+        } else {
+            const request = new XMLHttpRequest();
+            request.open("GET", "/query?point=" + currentPoint + "&past=" + pastDay + "&category=" + category);
+            request.onload = async function () {
+                if (request.status === 200) {
+                    currentPage = 1;
+                    currentPageSize = parseInt(request.response);
+                    if (currentPageSize === 0) {
+                        pastDay++;
+                        query();
+                    } else {
+                        data();
+                    }
                 }
             }
+            request.send();
         }
-        request.send();
     }
 
     function data() {
@@ -100,23 +124,26 @@
             tbody.removeChild(tbody.firstChild);
         }
         const request = new XMLHttpRequest();
-        request.open("GET", "/say?point=" + currentPoint + "&page=" + currentPage  + "&past=" + pastDay);
+        request.open("GET", "/message?point=" + currentPoint + "&page=" + currentPage  + "&past=" + pastDay  + "&category=" + category);
         request.onload = async function () {
             if (request.status === 200) {
                 const res = JSON.parse(request.response);
                 document.getElementById('query').innerHTML = "加载中，请稍候...";
                 for (let i = 0; i < res.length; i++) {
+                    const index = i + currentPage * 10 - 9;
                     const childNode = document.createElement('div');
                     const infoNode = document.createElement('div');
+                    const source = " 【来源：" + res[i].poster + "】"
+                    const created = " 发布时间：" + res[i].savetime.split('T')[0];
                     if (res[i].titlecn === 'No Translation') {
                         await getTranslator(res[i].title).then(response => {
-                            infoNode.innerHTML = (i + 1) + " " + response + " 【来源：" + res[i].poster + "】";
+                            infoNode.innerHTML = index + " " + response + source + created;
                         }, error => {
-                            infoNode.innerHTML = (i + 1) + " " + res[i].title + " 【来源：" + res[i].poster + "】";
+                            infoNode.innerHTML = index + " " + res[i].title + source + created;
                             console.log(error);
                         })
                     } else {
-                        infoNode.innerHTML = (i + 1) + " " + res[i].titlecn + " 【来源：" + res[i].poster + "】";
+                        infoNode.innerHTML = index + " " + res[i].titlecn + source + created;
                     }
                     const infoNodeOri = document.createElement('a');
                     infoNodeOri.setAttribute('href', res[i].link);
@@ -126,10 +153,22 @@
                     childNode.appendChild(infoNodeOri);
                     tbody.appendChild(childNode);
                 }
-                document.getElementById('next').setAttribute('style', 'display:inline-block');
-                document.getElementById('query').innerHTML = "当前展示 过去 " + pastDay + " 天 "
-                    + (currentPoint === 0 ? "全部情报" : "热点情报") +
-                    " 第 " + currentPage + " 页 共 " + currentPageSize + " 页";
+                document.getElementById('ins').setAttribute('style', 'display:inline-block');
+                if (category === 0) {
+                    document.getElementById('next').setAttribute('style', 'display:inline-block');
+                    document.getElementById('addpastday').setAttribute('style', 'display:inline-block');
+                    document.getElementById('keywords').value = ""
+                    document.getElementById('query').innerHTML = "当前展示 过去 " + pastDay + " 天 "
+                        + (currentPoint === 0 ? "全部情报" : "热点情报") +
+                        " 第 " + currentPage + " 页 共 " + currentPageSize + " 页";
+                } else {
+                    document.getElementById('next').setAttribute('style', 'display:none');
+                    document.getElementById('addpastday').setAttribute('style', 'display:none');
+                    document.getElementById('keywords').value = ""
+                    document.getElementById('query').innerHTML = "当前展示 过去 " + pastDay + " 天 " +
+                        " 第 " + currentPage + " 页 共 " + currentPageSize + " 页";
+                }
+
                 if (currentPageSize === 1) {
                     document.getElementById('pageprev').setAttribute('style', 'display:none');
                     document.getElementById('pagenext').setAttribute('style', 'display:none');
@@ -167,6 +206,73 @@
             currentPage--;
         }
         data();
+    }
+
+    function doSearch() {
+        const tbody = document.getElementById('info');
+        while (tbody.hasChildNodes()) {
+            tbody.removeChild(tbody.firstChild);
+        }
+        const request = new XMLHttpRequest();
+        const keywords = document.getElementById('keywords').value.toLowerCase();
+        request.open("GET", "/search?keywords=" + keywords);
+        request.onload = async function () {
+            if (request.status === 200) {
+                const res = JSON.parse(request.response);
+                document.getElementById('query').innerHTML = "加载中，请稍候...";
+                for (let i = 0; i < res.length; i++) {
+                    const index = i + 1;
+                    const childNode = document.createElement('div');
+                    const infoNode = document.createElement('div');
+                    const source = " 【来源：" + res[i].poster + "】"
+                    const created = " 发布时间：" + res[i].savetime.split('T')[0];
+                    if (res[i].titlecn === 'No Translation') {
+                        await getTranslator(res[i].title).then(response => {
+                            infoNode.innerHTML = index + " " + response + source + created;
+                        }, error => {
+                            infoNode.innerHTML = index + " " + res[i].title + source + created;
+                            console.log(error);
+                        })
+                    } else {
+                        infoNode.innerHTML = index + " " + res[i].titlecn + source + created;
+                    }
+                    const infoNodeOri = document.createElement('a');
+                    infoNodeOri.setAttribute('href', res[i].link);
+                    infoNodeOri.setAttribute('target', '_blank');
+                    infoNodeOri.innerHTML = res[i].title;
+                    childNode.appendChild(infoNode);
+                    childNode.appendChild(infoNodeOri);
+                    tbody.appendChild(childNode);
+                }
+                document.getElementById('query').innerHTML = "当前展示 关键词 " + keywords +
+                    " 全部情报 共" + res.length + "条";
+                document.getElementById('next').setAttribute('style', 'display:none');
+                document.getElementById('ins').setAttribute('style', 'display:none');
+                document.getElementById('addpastday').setAttribute('style', 'display:none');
+                document.getElementById('pageprev').setAttribute('style', 'display:none');
+                document.getElementById('pagenext').setAttribute('style', 'display:none');
+            }
+        }
+        request.send();
+    }
+
+    function doSelect() {
+        category = document.getElementById("category").selectedIndex;
+        if (category === 0) {
+            resetSearch();
+        } else {
+            pastDay = 10;
+            currentPoint = 1;
+            query();
+        }
+
+    }
+
+    function resetSearch() {
+        pastDay = 2;
+        category = 0;
+        currentPoint = 2;
+        query();
     }
 
 </script>

@@ -19,12 +19,16 @@ import java.util.Objects;
 @Service
 public class GetDataFeedService implements IGetDataFeedService {
 
-    static Document returnDocument(String url) throws Exception {
-        Proxy proxy = SetNetworkService.SetNetworkConnection();
-        return Jsoup.connect(url).proxy(proxy).get();
+    static Document returnDocument(String url) {
+        try {
+            return Jsoup.connect(url).get();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
-    static List<String> returnRss(String url) throws Exception {
+    static List<String> returnRss(String url) {
         Document document = returnDocument(url);
         Elements elements =  document.getElementsByTag("item");
         if (elements.isEmpty()) {

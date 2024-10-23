@@ -17,7 +17,9 @@ public interface SavedInfoMapper {
     public int createSavedInfoList(List<SavedInfo> newInfo);
     public List<SavedInfo> selectAllSavedInfo();
 
-    public List<SavedInfo> selectNewSavedInfo(String timeInterval);
+    public List<SavedInfo> selectNewSavedInfo(String timeInterval, String category);
+
+    public List<SavedInfo> selectSavedInfo(String keywords);
 
     public List<SavedInfo> selectHWSavedInfo(String kind);
 

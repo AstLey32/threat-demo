@@ -11,9 +11,14 @@ public class ReturnPageController {
         return new ModelAndView("index.html");
     }
 
-    @RequestMapping("/hvv")
-    public ModelAndView hvv(){
-        return new ModelAndView("hvv.html");
+    @RequestMapping("/new")
+    public ModelAndView newIndex(){
+        return new ModelAndView("new_index.html");
+    }
+
+    @RequestMapping("/search_result")
+    public ModelAndView searchResult(){
+        return new ModelAndView("search.html");
     }
 
 }

@@ -11,6 +11,14 @@
 
 调用端口8398
 
+依赖：
+Django
+tokenizers
+tensorflow
+tf-keras
+sentencepiece
+
+
 ## threat-demo威胁情报平台
 
 ReturnPageController

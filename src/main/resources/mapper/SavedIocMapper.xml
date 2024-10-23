@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sliverneedle.threatdemo.mapper.SavedIocMapper">
+
+    <resultMap id="resultMap" type="com.sliverneedle.threatdemo.domain.SavedIoc">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="tags" column="tags" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="DATE"/>
+    </resultMap>
+
+    <select id="selectAllSavedIoc" resultMap="resultMap">
+        SELECT *
+        FROM "saved_ioc"
+        ORDER BY "create_time" DESC
+    </select>
+
+    <select id="selectNewSavedIoc" parameterType="java.lang.String" resultMap="resultMap">
+        SELECT *
+        FROM "saved_ioc"
+        WHERE "create_time" >= (now()- INTERVAL ${timeInterval})
+    </select>
+
+    <select id="selectOneIoc" parameterType="java.lang.String" resultMap="resultMap">
+        SELECT *
+        FROM "saved_ioc"
+        WHERE "name" = #{savedIocName}
+    </select>
+
+    <insert id="createSavedIocList" parameterType="java.util.List">
+        INSERT INTO "saved_ioc" ("name", "tags", "description", "create_time") VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.name,jdbcType=VARCHAR},#{item.tags,jdbcType=VARCHAR},#{item.description,jdbcType=VARCHAR}, #{item.create_time,jdbcType=DATE})
+        </foreach>
+        ON CONFLICT (name) DO NOTHING;
+    </insert>
+
+    <update id="updateSavedIoc" parameterType="com.sliverneedle.threatdemo.domain.SavedIoc">
+        UPDATE "saved_ioc"
+        <set>
+            <if test='name != null'>
+                "name"=#{name,jdbcType=VARCHAR},
+            </if>
+            <if test='tags != null'>
+                "tags"=#{tags,jdbcType=VARCHAR},
+            </if>
+            <if test='description != null'>
+                "description"=#{description,jdbcType=VARCHAR},
+            </if>
+            <if test='create_time != null'>
+                "create_time"=#{create_time,jdbcType=DATE},
+            </if>
+        </set>
+        WHERE "id"=#{savedIocId,jdbcType=BIGINT}
+    </update>
+
+    <update id="updateSavedIocList" parameterType="java.util.List">
+        <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+            UPDATE "saved_ioc"
+            <set>
+                <if test='item.name != null'>
+                    "name"=#{item.name,jdbcType=VARCHAR},
+                </if>
+                <if test='item.tags != null'>
+                    "tags"=#{item.tags,jdbcType=VARCHAR},
+                </if>
+                <if test='item.description != null'>
+                    "description"=#{item.description,jdbcType=VARCHAR},
+                </if>
+                <if test='item.create_time != null'>
+                    "create_time"=#{item.create_time,jdbcType=DATE},
+                </if>
+            </set>
+            WHERE
+            "id" = #{item.id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+
+    <delete id="deleteSavedIoc" parameterType="java.lang.Long">
+        DELETE
+        FROM "saved_ioc"
+        WHERE "id"=#{savedIocId}
+    </delete>
+
+    <delete id="deleteSavedIocList" parameterType="java.util.List">
+        DELETE
+        FROM "saved_ioc"
+        WHERE "id" IN
+        <foreach collection="list" item="item" open="(" separator="," close=")">
+            #{item.id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+</mapper>

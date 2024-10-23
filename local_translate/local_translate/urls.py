@@ -5,4 +5,5 @@ urlpatterns = [
     path('trans', trans.trans),
     path('spider', spider.spider),
     path('', middleware.index),
+    path('get_token', middleware.token),
 ]

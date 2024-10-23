@@ -1,4 +1,5 @@
 from django.utils.deprecation import MiddlewareMixin
+from django.middleware.csrf import get_token
 from django.http import HttpResponse
 import time
 
@@ -29,3 +30,7 @@ class IPLimitMiddleware(MiddlewareMixin):
 def index(request):
     ip = request.META.get('REMOTE_ADDR')
     return HttpResponse("兄弟，你好香！\n已定位到男同：来自ip【" + ip + "】")
+
+
+def token(request):
+    return HttpResponse(get_token(request))

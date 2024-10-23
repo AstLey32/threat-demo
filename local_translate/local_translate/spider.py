@@ -22,6 +22,7 @@ def get_proxies():
     }
     return proxies
 
+
 def spider(request):
     req_text = urllib.parse.unquote(request.GET["geturl"])
     try:
@@ -34,7 +35,10 @@ def spider(request):
         spider_name = oriText.split('.py')[0]
         try:
             search_news = eval('search.'+ spider_name + '()')
-            return HttpResponse([i.get_str() for i in search_news])
+            if len(search_news) == 0:
+                return HttpResponse('[]')
+            else:
+                return HttpResponse([i.get_str() for i in search_news])
         except Exception as e:
             print(e)
             if 'no attribute' in str(e):

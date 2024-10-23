@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>银针情报平台</title>
+<meta name="description" content="银针情报平台 | 主页" />
+<meta name="keywords" content="银针情报平台 | 主页" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+
+<body>
+
+<div class="main" style="text-align: center">
+    <h1 class="title">终端云银针 | 威胁情报平台</h1>
+    <div class="search-box">
+        <input id="search-input" type="search" autocomplete="off" placeholder="威胁情报搜索">
+        <button id="search" class="input-button search-button" title="搜索" onclick="doSearch('input')"></button>
+        <button id="add" class="input-button add-button" title="添加" onclick="addInfo()"></button>
+    </div>
+    <div class="info-box">
+        <div id="incidentInfo" class="listInfo">
+            <h2> 活跃的事件</h2>
+            <div id="incidentList" class="info-self">无情报</div>
+        </div>
+        <div id="illegalityInfo" class="listInfo">
+            <h2> 地下活动</h2>
+            <div id="illegalityList" class="info-self">无情报</div>
+        </div>
+        <div id="newsInfo" class="listInfo">
+            <h2> 互联网舆情</h2>
+            <div id="newsList" class="info-self">无情报</div>
+        </div>
+    </div>
+    <div class="info-box">
+        <div id="vulnInfo" class="listInfo">
+            <h2> 活跃的漏洞</h2>
+            <div id="vulnList" class="info-self">无情报</div>
+        </div>
+        <div id="techInfo" class="listInfo">
+            <h2> 攻防技术</h2>
+            <div id="techList" class="info-self">无情报</div>
+        </div>
+        <div id="iocInfo" class="listInfo">
+            <h2> IOC情报</h2>
+            <div id="iocList" class="info-self">无情报</div>
+        </div>
+    </div>
+
+
+    <div id="addInfo" class="addInfo" style="display:none">
+        <h2 style="text-align: center"> 新增情报</h2>
+        <div  style="margin: 0 0 2% 5%;">
+            <label> 类型：</label>
+            <div id="kind" style="display:inline; position: absolute; left: 30%">
+                <select id="category">
+                    <option value="1">活跃的事件</option>
+                    <option value="2">地下活动</option>
+                    <option value="3">互联网舆情</option>
+                    <option value="4">活跃的漏洞</option>
+                    <option value="5">攻防技术</option>
+                    <option value="6">IOC</option>
+                </select>
+            </div>
+        </div>
+        <div  style="margin: 0 0 2% 5%;">
+            <label> 标题：
+                <input style="position: absolute; left: 30%" id="title">
+            </label>
+        </div>
+        <div  style="margin: 0 0 2% 5%;">
+            <label> 来源：
+                <input style="position: absolute; left: 30%" id="source">
+            </label>
+        </div>
+        <div  style="margin: 0 0 2% 5%;">
+            <label> 标签：
+                <input style="position: absolute; left: 30%" id="tags">
+            </label>
+        </div>
+        <div  style="margin: 0 0 2% 5%;">
+            <label> 详细信息：
+                <input style="position: absolute; left: 30%" id="detail">
+            </label>
+        </div>
+        <div  style="margin: 0 0 5% 0; text-align: center">
+            <button onclick="closeAddInfo(true)"> 确认 </button>
+            <button onclick="closeAddInfo(false)"> 取消 </button>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    h1.title {
+        margin-bottom: 40px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        justify-content: flex-end;
+        min-height: 100px;
+    }
+    div.search-box {
+        margin: auto;
+        display: inherit;
+        margin-bottom: 16px;
+        position: relative;
+        border-radius: 24px;
+        box-shadow: 0 1px 6px 0 #20212447;
+        font-size: 16px;
+        height: 48px;
+        width: 750px;
+    }
+    #search-input {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background-color: #ffffffff;
+        border: none;
+        border-radius: 24px;
+        color: #000000ff;
+        font-family: inherit;
+        font-size: inherit;
+        height: 100%;
+        outline: 0;
+        padding-inline-end: 87px;
+        padding-inline-start: 52px;
+        position: relative;
+        width: 100%;
+    }
+    button.input-button {
+        border: none;
+        cursor: pointer;
+        background-color: #FFFFFF;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: center center;
+        align-items: center;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        position: absolute;
+        top: 8px;
+        flex-shrink: 0;
+        width: 32px;
+    }
+    button.search-button {
+        right: 64px;
+        background-image: url("search.svg");
+    }
+    button.add-button {
+        right: 32px;
+        background-image: url("add.svg");
+    }
+    div.listInfo {
+        display: inline-block;
+        border-style: solid;
+        vertical-align: top;
+        border-radius: 24px;
+        width: 30%;
+        height: 200px;
+        margin: 1%;
+    }
+    div.info-box {
+        width: 80%;
+        margin-left: 10%;
+    }
+    div.info-self {
+        text-align: left;
+        margin-left: 5%;
+    }
+    div.info-line {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+    div.addInfo {
+        background: #EEFFFF;
+        width: 30%;
+        position: absolute;
+        left: 33%;
+        top: 25%;
+        text-align: left;
+    }
+</style>
+
+<script type="application/javascript">
+    window.onload = queryAll();
+    let addKind = '';
+    let hvvinfos = [];
+
+    function queryAll() {
+        data('incident');
+        data('illegality');
+        data('news');
+        data('vuln');
+        data('tech');
+        data('ioc');
+    }
+
+    function getCategoryByKind(kind) {
+        switch (kind) {
+            case 'incident': return '1';
+            case 'illegality': return '2';
+            case 'news': return '3';
+            case 'vuln': return '4';
+            case 'tech': return '5';
+            case 'ioc': return '6';
+        }
+    }
+
+    function getKindByCategory(category) {
+        console.log(category)
+        switch (category) {
+            case '1': return 'incident';
+            case '2': return 'ransom';
+            case '3': return 'hotsearch';
+            case '4': return 'vuln';
+            case '5': return 'news';
+            case '6': return 'ioc';
+            default: return 'unknown';
+        }
+    }
+
+    function data(kind) {
+        const tbody = document.getElementById(kind+'List');
+        while (tbody.hasChildNodes()) {
+            tbody.removeChild(tbody.firstChild);
+        }
+        const request = new XMLHttpRequest();
+        request.open("GET", "/message?point=1&page=1&past=7&category=" + getCategoryByKind(kind));
+        request.onload = async function () {
+            if (request.status === 200) {
+                const res = JSON.parse(request.response);
+                const max_len = res.length > 5 ? 5 : res.length
+                for (let i = 0; i < max_len; i++) {
+                    const index = i + 1
+                    const infoNode = document.createElement('div');
+                    if (res[i].titlecn === 'No Translation') {
+                        await getTranslator(res[i].title).then(response => {
+                            infoNode.innerHTML = index + " " + response;
+                        }, error => {
+                            infoNode.innerHTML = index + " " + res[i].title;
+                            console.log(error);
+                        })
+                    } else {
+                        infoNode.innerHTML = index + " " + res[i].titlecn;
+                    }
+                    infoNode.setAttribute('class','info-line');
+                    infoNode.setAttribute('onclick','doSearch(\''+res[i].title+'\')')
+                    tbody.appendChild(infoNode);
+                }
+            }
+        }
+        request.send();
+    }
+
+    function addInfo() {
+        document.getElementById('addInfo').setAttribute('style','display:block');
+    }
+
+    function closeAddInfo(isOK) {
+        const category = document.getElementById('category');
+        const infoTitle = document.getElementById('title');
+        const infoSource = document.getElementById('source');
+        const infoTags = document.getElementById('tags');
+        const infoDetail = document.getElementById('detail');
+        if (isOK) {
+            var info = {
+                'title': infoTitle.value,
+                'link': infoSource.value,
+                'poster': getKindByCategory(category.value),
+                'category': infoTags.value,
+                'mark': '6',
+                'titlecn': infoDetail.value
+            }
+            console.log(info);
+            const request = new XMLHttpRequest();
+            request.open("POST", "/addinfo");
+            request.setRequestHeader('Content-Type','application/json');
+            request.onload = function() {
+                if (request.status === 200) {
+                    console.log('ok');
+                }
+            }
+            request.send(JSON.stringify(info));
+        }
+        category.value = 1;
+        infoTitle.value = '';
+        infoSource.value = '';
+        infoTags.value = '';
+        infoDetail.value = '';
+        document.getElementById('addInfo').setAttribute('style','display:none');
+    }
+
+    function doSearch(input) {
+        if (input === 'input') {
+            input = document.getElementById('search-input').value;
+        }
+        window.open("/search_result?search="+input,'_self');
+    }
+
+    function showInfo(id) {
+        let isShowInfo = false;
+        for (let i in hvvinfos) {
+            if (hvvinfos[i].id === id) {
+                if (hvvinfos[i].poster.startsWith("http")) {
+                    window.open(hvvinfos[i].poster,"_blank");
+                } else {
+                    alert(hvvinfos[i].titlecn);
+                }
+                isShowInfo = true;
+                break;
+            }
+        }
+        if (!isShowInfo) {
+            alert("showInfo error!");
+        }
+    }
+
+</script>
+
+</body>
+</html>

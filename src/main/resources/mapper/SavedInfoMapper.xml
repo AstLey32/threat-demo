@@ -23,14 +23,16 @@
     <select id="selectNewSavedInfo" parameterType="java.lang.String" resultMap="resultMap">
         SELECT *
         FROM "saved_info"
-        WHERE "savetime" >= (now()- INTERVAL ${timeInterval})
+        WHERE "savetime" >= (now()- INTERVAL ${timeInterval}) and position(#{category} in category) > 0
     </select>
 
-    <select id="selectSavedInfo" parameterType="java.lang.Long" resultMap="resultMap">
+    <select id="selectSavedInfo" parameterType="java.lang.String" resultMap="resultMap">
         SELECT *
         FROM "saved_info"
-        WHERE "id"=#{savedInfoId}
+        WHERE position(#{keywords} in lower(title)) > 0
+        ORDER BY savetime DESC
     </select>
+
     <select id="selectHWSavedInfo" parameterType="java.lang.String" resultMap="resultMap">
         SELECT *
         FROM "saved_info"

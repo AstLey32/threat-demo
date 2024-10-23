@@ -1,7 +1,9 @@
 package com.sliverneedle.threatdemo.service.impl;
 
 import com.sliverneedle.threatdemo.domain.SavedInfo;
+import com.sliverneedle.threatdemo.domain.SavedIoc;
 import com.sliverneedle.threatdemo.mapper.SavedInfoMapper;
+import com.sliverneedle.threatdemo.mapper.SavedIocMapper;
 import com.sliverneedle.threatdemo.service.ISaveNewInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +18,8 @@ import java.util.stream.Collectors;
 public class SaveNewInfoService implements ISaveNewInfoService {
     @Autowired
     private SavedInfoMapper savedInfoMapper;
+    @Autowired
+    private SavedIocMapper savedIocMapper;
 
     @Override
     public int saveNewInfo(List<SavedInfo> newInfo) {
@@ -44,11 +48,48 @@ public class SaveNewInfoService implements ISaveNewInfoService {
     }
 
     @Override
+    public List<SavedInfo> getSavedInfoByKeywords(String keywords) {
+        return savedInfoMapper.selectSavedInfo(keywords);
+    }
+
+    @Override
+    public List<SavedInfo> transSavedIocToSavedInfo(List<SavedIoc> iocs) {
+        List<SavedInfo> savedInfoList = new ArrayList<>();
+        for (SavedIoc ioc : iocs) {
+            SavedInfo savedInfo = new SavedInfo();
+            savedInfo.setId(ioc.getId());
+            savedInfo.setTitle(ioc.getName());
+            savedInfo.setCategory(ioc.getTags());
+            savedInfo.setPoster(ioc.getDescription());
+            savedInfo.setMark("1");
+            savedInfo.setSavetime(ioc.getCreateTime());
+            savedInfo.setTitlecn(ioc.getName());
+            savedInfoList.add(savedInfo);
+        }
+        return savedInfoList;
+    }
+
+    @Override
+    public List<SavedIoc> getSavedIocByName(String name) {
+        return savedIocMapper.selectOneIoc(name);
+    }
+
+    @Override
     public List<SavedInfo> getHWInfo(String kind) {return savedInfoMapper.selectHWSavedInfo(kind);}
 
     @Override
-    public List<SavedInfo> getNewInfo(int pastDate) {
-        return savedInfoMapper.selectNewSavedInfo("'" + pastDate + " DAY'");
+    public List<SavedInfo> getNewInfo(int past, int category) {
+        String categoryStr = ";";
+        switch (category) {
+            case 1: categoryStr = "incident"; break;
+            case 2: categoryStr = "ransom"; break;
+            case 3: categoryStr = "hotsearch"; break;
+            case 4: categoryStr = "vuln"; break;
+            case 5: categoryStr = "news"; break;
+            case 6: return this.transSavedIocToSavedInfo(savedIocMapper.selectAllSavedIoc());
+            default: break;
+        }
+        return savedInfoMapper.selectNewSavedInfo("'" + past + " DAY'", categoryStr);
     }
 
     @Override

@@ -4,7 +4,7 @@ import com.sliverneedle.threatdemo.domain.KeyWords;
 import com.sliverneedle.threatdemo.domain.SavedInfo;
 import com.sliverneedle.threatdemo.mapper.KeyWordsMapper;
 import com.sliverneedle.threatdemo.service.IResolveGetInfoService;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

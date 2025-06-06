@@ -30,4 +30,4 @@ build/
 
 ### VS Code ###
 .vscode/
-/local_translate/opus*
+/python_spider/opus*

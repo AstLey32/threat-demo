@@ -2,12 +2,11 @@
 
 威胁情报平台demo
 
-## local_translate本地翻译环境
-依赖opus-mt-en-zh翻译模型
+## python_spider 爬虫环境
+配置--settings=python_spider.settings.no_translation不开启本地翻译
+本地翻译功能依赖opus-mt-en-zh翻译模型
 
 下载地址：https://huggingface.co/Helsinki-NLP/opus-mt-en-zh
-
-工程放置在/local_translate/
 
 调用端口8398
 

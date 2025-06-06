@@ -7,7 +7,7 @@ import time
 class IPLimitMiddleware(MiddlewareMixin):
     ipBlockDict = {}
     ipVisitDict = {}
-    allowIps = ['127.0.0.1', '0.0.0.0', '10.164.217.186']
+    allowIps = ['127.0.0.1', '0.0.0.0']
 
     def process_request(self, request):
         ip = request.META.get('REMOTE_ADDR')

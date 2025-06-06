@@ -20,7 +20,7 @@ def weibo():
         'Cookie': 'SUB=_2AkMSOMUzf8NxqwFRmfoXzWPlbIhyzgrEieKkZDToJRMxHRl-yT8XqlAttRB6Objr3Fl4IcqHFu7zjVrGZpwf0LP4VVXx; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WFhCsudQj_idZ59fYUB_oRY; _s_tentry=passport.weibo.com; Apache=1537517908848.3137.1701071367195; SINAGLOBAL=1537517908848.3137.1701071367195; ULV=1701071367201:1:1:1:1537517908848.3137.1701071367195:'
     }
     requests.packages.urllib3.disable_warnings()
-    r = requests.get(url, headers=headers, proxies=spider.get_proxies(), verify=False)
+    r = requests.get(url, headers=headers, verify=False)
     news_list = []
     for line in r.text.splitlines():
         if '"_blank">' in line:

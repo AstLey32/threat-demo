@@ -15,14 +15,6 @@ class SpiderNews:
                 "\"pubDate\": \"" + self.pubDate + "\", \"category\": \"" + self.category + "\"}")
 
 
-def get_proxies():
-    proxies = {
-        "http": "http://l00618322:WEst%403226@proxycn2.huawei.com:8080/",
-        "https": "http://l00618322:WEst%403226@proxycn2.huawei.com:8080/"
-    }
-    return proxies
-
-
 def spider(request):
     req_text = urllib.parse.unquote(request.GET["geturl"])
     try:

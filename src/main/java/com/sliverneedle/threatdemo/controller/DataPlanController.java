@@ -26,6 +26,7 @@ public class DataPlanController {
     @RequestMapping("/ins")
     public List<String> ins() {
         List<String> insLog = new ArrayList<>();
+        int allInsertNum = 0;
         for (DataSource ds: getDatabaseService.getValidDataSource()){
             String url = ds.getUrl();
             String rule = ds.getRule();
@@ -33,6 +34,7 @@ public class DataPlanController {
                 List<String> oriList = getDataFeedService.returnElement(url, rule);
                 List<SavedInfo> retList = resolveGetInfoService.returnElement(oriList, ds.getPoster(), ds.getCategory());
                 int insertNum = saveNewInfoService.saveNewInfo(retList);
+                allInsertNum += insertNum;
                 insLog.add(ds.getPoster() + " Insert " + insertNum + " info success!");
             } catch (Exception e) {
                 if (e instanceof UnknownHostException) {
@@ -44,6 +46,7 @@ public class DataPlanController {
                 e.printStackTrace();
             }
         }
+        insLog.add("爬虫完成，新增 " + allInsertNum + " 条记录");
         return insLog;
     }
 

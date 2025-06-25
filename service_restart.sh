@@ -1,4 +1,4 @@
-PORTS="28351 8398"
+PORTS="28358 8398"
 for port in $PORTS; do
     pid=$(lsof -ti :$port)
     

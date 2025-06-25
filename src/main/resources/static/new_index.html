@@ -578,7 +578,6 @@
     </div>
 
     <script>
-        let API_BASE_URL = 'http://127.0.0.1:28358';
         let currentPage = 1;
         const itemsPerPage = 10;
         let totalItems = 0;
@@ -640,7 +639,7 @@
         // 获取数据源
         async function fetchDataSources() {
             try {
-                const response = await fetch(`${API_BASE_URL}/sources`);
+                const response = await fetch(`/sources`);
                 if (!response.ok) throw new Error('获取数据源失败');
                 
                 allSources = await response.json();
@@ -703,7 +702,7 @@
                 
                 const queryParams = new URLSearchParams(params);
                 
-                const response = await fetch(`${API_BASE_URL}/query_count?${queryParams}`);
+                const response = await fetch(`/query_count?${queryParams}`);
                 if (!response.ok) throw new Error('获取总数失败');
                 
                 totalItems = await response.json();
@@ -736,7 +735,7 @@
                 
                 const queryParams = new URLSearchParams(params);
                 
-                const response = await fetch(`${API_BASE_URL}/query_items?${queryParams}`);
+                const response = await fetch(`/query_items?${queryParams}`);
                 if (!response.ok) throw new Error('获取威胁情报失败');
                 
                 const data = await response.json();
@@ -804,7 +803,7 @@
                     </div>
                     <div class="intel-footer">
                         <div>
-                            ${item.publish_time ? `<span><i class="far fa-clock"></i> ${item.publish_time}</span>` : ''}
+                            ${item.savetime ? `<span><i class="far fa-clock"></i> ${item.savetime}</span>` : ''}
                         </div>
                         <div>
                             ${item.mark ? `<span class="intel-score">评分: ${item.mark}</span>` : ''}
@@ -993,8 +992,8 @@
             showToast('爬虫正在运行，请稍候...', 'info');
             
             try {
-                const response = await fetch(`${API_BASE_URL}/ins`, {
-                    method: 'POST'
+                const response = await fetch(`/ins`, {
+                    method: 'GET'
                 });
                 
                 if (!response.ok) {
@@ -1003,7 +1002,7 @@
                 }
                 
                 const result = await response.json();
-                showToast(`爬虫完成，新增 ${result.new_records || 0} 条记录`, 'success');
+                showToast(result[result.length - 1], 'success');
                 fetchThreatIntel();
                 
             } catch (error) {

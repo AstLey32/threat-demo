@@ -47,7 +47,7 @@
             and position(#{title} in lower(title)) > 0
             </if>
             <if test='category != ""'>
-            and "category"=#{category}
+            and position(#{category} in lower(category)) > 0
             </if>
             <if test='source != ""'>
             and "poster"=#{source}

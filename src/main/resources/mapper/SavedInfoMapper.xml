@@ -39,6 +39,22 @@
         WHERE "category"=#{kind} and "mark"='HW'
     </select>
 
+    <select id="selectNewSavedInfoFilter" parameterType="java.lang.String" resultMap="resultMap">
+        SELECT *
+        FROM "saved_info"
+        WHERE "savetime" >= (now()- INTERVAL '30 DAYS')
+            <if test='title != ""'>
+            and position(#{title} in lower(title)) > 0
+            </if>
+            <if test='category != ""'>
+            and "category"=#{category}
+            </if>
+            <if test='source != ""'>
+            and "poster"=#{source}
+            </if>
+        ORDER BY savetime DESC
+    </select>
+
     <insert id="createSavedInfoList" parameterType="java.util.List">
         INSERT INTO "saved_info" ("title", "link", "poster", "category", "mark", "savetime", "titlecn") VALUES
         <foreach collection="list" item="item" separator=",">

@@ -6,12 +6,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class ReturnPageController {
-    @RequestMapping("/")
+    @RequestMapping("/old")
     public ModelAndView say(){
         return new ModelAndView("index.html");
     }
 
-    @RequestMapping("/new")
+    @RequestMapping("/")
     public ModelAndView newIndex(){
         return new ModelAndView("new_index.html");
     }

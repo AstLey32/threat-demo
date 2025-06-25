@@ -578,7 +578,7 @@
     </div>
 
     <script>
-        let API_BASE_URL = 'http://111.119.208.57:23581';
+        let API_BASE_URL = 'http://127.0.0.1:28351';
         let currentPage = 1;
         const itemsPerPage = 10;
         let totalItems = 0;
@@ -785,7 +785,7 @@
             data.forEach(item => {
                 // 使用翻译后的标题和描述（如果存在）
                 const title = escapeHtml(item.translated_title || item.title);
-                const description = escapeHtml(item.translated_description || item.description || '暂无描述');
+                const description = escapeHtml(item.titlecn || item.description || '暂无描述');
                 
                 const card = document.createElement('div');
                 card.className = 'intel-card';
@@ -794,7 +794,7 @@
                         <div class="intel-title">${title}</div>
                         <div class="intel-source">
                             <i class="fas fa-database"></i>
-                            ${item.source}
+                            ${item.poster}
                             ${item.category ? `<span class="intel-category">${item.category}</span>` : ''}
                         </div>
                     </div>
@@ -807,7 +807,7 @@
                             ${item.publish_time ? `<span><i class="far fa-clock"></i> ${item.publish_time}</span>` : ''}
                         </div>
                         <div>
-                            ${item.score ? `<span class="intel-score">评分: ${item.score}</span>` : ''}
+                            ${item.mark ? `<span class="intel-score">评分: ${item.mark}</span>` : ''}
                             <a href="${item.link}" target="_blank" class="intel-link">
                                 <i class="fas fa-external-link-alt"></i> 查看详情
                             </a>

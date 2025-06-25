@@ -23,6 +23,8 @@ public interface SavedInfoMapper {
 
     public List<SavedInfo> selectHWSavedInfo(String kind);
 
+    public List<SavedInfo> selectNewSavedInfoFilter(String title, String source, String category);
+
     public int updateSavedInfo(String title, String link, String poster, String category,
                                String mark, Date savetime, String titlecn, Long savedInfoId);
 

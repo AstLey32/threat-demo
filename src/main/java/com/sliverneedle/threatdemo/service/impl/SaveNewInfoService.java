@@ -8,10 +8,7 @@ import com.sliverneedle.threatdemo.service.ISaveNewInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -94,11 +91,7 @@ public class SaveNewInfoService implements ISaveNewInfoService {
 
     @Override
     public List<SavedInfo> getNewSavedInfo(String title, String source, String category) {
-        if (title != "") {
-            return savedInfoMapper.selectSavedInfo(title);
-        } else {
-            return savedInfoMapper.selectNewSavedInfo("'7 DAY'", ";");
-        }
+        return savedInfoMapper.selectNewSavedInfoFilter(title, source, category);
     }
 
     @Override

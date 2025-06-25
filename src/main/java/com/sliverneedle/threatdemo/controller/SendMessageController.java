@@ -56,12 +56,12 @@ public class SendMessageController {
     }
 
     @RequestMapping("/query_count")
-    public int queryCount(@RequestParam(value = "title") String title,
-                         @RequestParam(value = "source") String source,
-                         @RequestParam(value = "category" ) String category) {
+    public int queryCount(@RequestParam(value = "title", required = false, defaultValue = "") String title,
+                         @RequestParam(value = "source", required = false, defaultValue = "") String source,
+                         @RequestParam(value = "category", required = false, defaultValue = "" ) String category) {
         int savedInfoLength = 0;
         for (SavedInfo info: saveNewInfoService.getNewSavedInfo(title, source, category)) {
-            if (info.getMark() != null) {
+            if (info.getMark() != null && !Objects.equals(info.getMark(), "HW")) {
                 savedInfoLength++;
             }
         }
@@ -69,14 +69,14 @@ public class SendMessageController {
     }
 
     @RequestMapping("/query_items")
-    public List<SavedInfo> queryItems(@RequestParam(value = "title") String title,
-                         @RequestParam(value = "source") String source,
-                         @RequestParam(value = "category" ) String category,
-                         @RequestParam(value = "limit") int limit,
-                         @RequestParam(value = "offset") int offset) {
+    public List<SavedInfo> queryItems(@RequestParam(value = "title", required = false, defaultValue = "") String title,
+                         @RequestParam(value = "source", required = false, defaultValue = "") String source,
+                         @RequestParam(value = "category", required = false, defaultValue = "" ) String category,
+                         @RequestParam(value = "limit", required = false, defaultValue = "0") int limit,
+                         @RequestParam(value = "offset", required = false, defaultValue = "0") int offset) {
         List<SavedInfo> savedInfoList = new ArrayList<>();
         for (SavedInfo info: saveNewInfoService.getNewSavedInfo(title, source, category)) {
-            if (info.getMark() != null) {
+            if (info.getMark() != null && !Objects.equals(info.getMark(), "HW")) {
                 savedInfoList.add(info);
             }
         }

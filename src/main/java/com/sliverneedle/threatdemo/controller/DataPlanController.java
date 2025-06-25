@@ -55,6 +55,11 @@ public class DataPlanController {
         }
     }
 
+    @RequestMapping("/sources")
+    public List<DataSource> getDatasource() {
+        return getDatabaseService.getAllDataSource();
+    }
+
     @RequestMapping("/trans_all")
     public List<String> transAll() {
         List<String> transLog = new ArrayList<>();

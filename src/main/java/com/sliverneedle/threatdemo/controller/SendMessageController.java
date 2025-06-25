@@ -55,6 +55,35 @@ public class SendMessageController {
         return (savedInfoLength + 9) / 10;
     }
 
+    @RequestMapping("/query_count")
+    public int queryCount(@RequestParam(value = "title") String title,
+                         @RequestParam(value = "source") String source,
+                         @RequestParam(value = "category" ) String category) {
+        int savedInfoLength = 0;
+        for (SavedInfo info: saveNewInfoService.getNewSavedInfo(title, source, category)) {
+            if (info.getMark() != null) {
+                savedInfoLength++;
+            }
+        }
+        return savedInfoLength;
+    }
+
+    @RequestMapping("/query_items")
+    public List<SavedInfo> queryItems(@RequestParam(value = "title") String title,
+                         @RequestParam(value = "source") String source,
+                         @RequestParam(value = "category" ) String category,
+                         @RequestParam(value = "limit") int limit,
+                         @RequestParam(value = "offset") int offset) {
+        List<SavedInfo> savedInfoList = new ArrayList<>();
+        for (SavedInfo info: saveNewInfoService.getNewSavedInfo(title, source, category)) {
+            if (info.getMark() != null) {
+                savedInfoList.add(info);
+            }
+        }
+        savedInfoList.sort(Comparator.comparing(SavedInfo::getMark).reversed());
+        return savedInfoList.subList(offset, Math.min(offset + limit, savedInfoList.size()));
+    }
+
     @RequestMapping("/trans")
     public String trans(@RequestParam(value = "trans") String oriWords) throws Exception {
         System.out.println(oriWords);

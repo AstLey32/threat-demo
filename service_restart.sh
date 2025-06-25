@@ -1,4 +1,4 @@
-PORTS="28358 8398"
+PORTS="28351 8398"
 for port in $PORTS; do
     pid=$(lsof -ti :$port)
     
@@ -12,4 +12,5 @@ done
 
 cd /root/threat-spider/threat-demo
 mvn spring-boot:run &
-./start_python_spider.sh &
+cd python_spider
+python3 manage.py runserver 127.0.0.1:8398 --noreload &

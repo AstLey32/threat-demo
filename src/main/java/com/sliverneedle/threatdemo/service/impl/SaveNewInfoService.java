@@ -93,6 +93,15 @@ public class SaveNewInfoService implements ISaveNewInfoService {
     }
 
     @Override
+    public List<SavedInfo> getNewSavedInfo(String title, String source, String category) {
+        if (title != "") {
+            return savedInfoMapper.selectSavedInfo(title);
+        } else {
+            return savedInfoMapper.selectNewSavedInfo("'7 DAY'", ";");
+        }
+    }
+
+    @Override
     public int updateSavedInfo(SavedInfo Info) {
         return  savedInfoMapper.updateSavedInfo(
                 Info.getTitle(), Info.getLink(), Info.getPoster(), Info.getCategory(),

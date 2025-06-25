@@ -532,9 +532,9 @@
                         <button id="refresh-data" class="btn btn-secondary">
                             <i class="fas fa-sync-alt"></i> 刷新数据
                         </button>
-                        <!-- <button id="start-crawl" class="btn btn-primary">
+                        <button id="start-crawl" class="btn btn-primary">
                             <i class="fas fa-spider"></i> 启动爬虫
-                        </button> -->
+                        </button>
                     </div>
                 </div>
 
@@ -553,7 +553,7 @@
     </div>
 
     <!-- 启动爬虫确认模态框 -->
-    <!-- <div class="modal" id="crawl-modal">
+    <div class="modal" id="crawl-modal">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="modal-title">
@@ -569,7 +569,7 @@
                 <button id="confirm-crawl" class="btn btn-primary">确认</button>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- 通知提示 -->
     <div class="toast" id="toast">
@@ -578,7 +578,7 @@
     </div>
 
     <script>
-        let API_BASE_URL = 'http://111.119.208.57:23581/api';
+        let API_BASE_URL = 'http://111.119.208.57:23581';
         let currentPage = 1;
         const itemsPerPage = 10;
         let totalItems = 0;
@@ -736,7 +736,7 @@
                 
                 const queryParams = new URLSearchParams(params);
                 
-                const response = await fetch(`${API_BASE_URL}/query?${queryParams}`);
+                const response = await fetch(`${API_BASE_URL}/query_items?${queryParams}`);
                 if (!response.ok) throw new Error('获取威胁情报失败');
                 
                 const data = await response.json();
@@ -993,7 +993,7 @@
             showToast('爬虫正在运行，请稍候...', 'info');
             
             try {
-                const response = await fetch(`${API_BASE_URL}/start_crawl`, {
+                const response = await fetch(`${API_BASE_URL}/ins`, {
                     method: 'POST'
                 });
                 

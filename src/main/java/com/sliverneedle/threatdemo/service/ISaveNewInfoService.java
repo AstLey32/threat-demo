@@ -20,6 +20,8 @@ public interface ISaveNewInfoService {
 
     public List<SavedInfo> getNewInfo(int past, int category);
 
+    public List<SavedInfo> getNewSavedInfo(String title, String source, String category);
+
     public int updateSavedInfo(SavedInfo Info);
 
     public int updateSavedInfoList(List<SavedInfo> Info);

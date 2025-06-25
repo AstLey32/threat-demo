@@ -37,6 +37,7 @@ if settings.LOCAL_TRANS:
 
 
     def trans(request):
+        #return HttpResponse("oi!")
         global local_trans
         if local_trans is None:
             return HttpResponse("System error")
@@ -59,10 +60,13 @@ if settings.LOCAL_TRANS:
 
 else:
     def trans(request):
+        #return HttpResponse("oi!")
         req_text = urllib.parse.unquote(request.GET["words"])
         try:
             oriText = base64.b64decode(req_text).decode()
             print(oriText)
+            with open('text2bTrans.txt', 'a', encoding='utf-8') as f:
+                f.write(oriText + "\n")
         except Exception as e:
             print(e)
             return HttpResponse("System error")

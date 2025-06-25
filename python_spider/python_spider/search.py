@@ -5,7 +5,7 @@ from . import spider
 
 
 def get_keywords():
-    keywords = requests.get('http://127.0.0.1:8080/getHotSearchDict').text
+    keywords = requests.get('http://127.0.0.1:28358/getHotSearchDict').text
     return json.loads(keywords)
 
 

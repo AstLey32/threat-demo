@@ -1,0 +1,840 @@
+Strategies to secure long-life IoT devicesIs Cold Email Still Effective in 2025? Best Practices for Outreach and Security小户型 3D 打印方案：宜家推车爆改移动工作站Confucius 组织最新组件化后门 anondoor 披露透过隐匿之镜：重新思考 RAG 中的攻击与防御[remote] Ingress-NGINX 4.11.0 - Remote Code Execution (RCE)[local] Microsoft Excel LTSC 2024 - Remote Code Execution (RCE)[remote] FortiOS SSL-VPN 7.4.4 - Insufficient Session Expiration & Cookie Reuse使用 X11 的 Plasma 用户升级 6.4.0 时需要手动干预JDK高版本特性总结与ZGC实践可信实验白皮书系列06：观察性研究GitHub Actions + SSH 自动部署教程Linux系统出现重大安全漏洞 借助漏洞可以轻松将本地用户提升为root权限加密货币交易所开始清退中国/美国客户 请立即提现否则会被收费Is Cold Email Still Effective in 2025? Best Practices for Outreach and SecurityEmacs 实时预览 markdown微信上线「短剧」小程序；传宇树C轮融资估值超100亿，腾讯阿里吉利联投；OpenAI警告：高生物武器风险模型将出现 |极客早知道每周高级威胁情报解读(2025.06.13~06.19)透过隐匿之镜：重新思考 RAG 中的攻击与防御Confucius 组织最新组件化后门 anondoor 披露香蕉小队再出手：60余个GitHub仓库遭木马化，新型软件供应链攻击来袭GitHub Actions + SSH 自动部署教程Famous Chollima deploying Python version of GolangGhost RAT67 Trojanized GitHub Repositories Found in Campaign Targeting Gamers and Developers
+Anondoor discloses - The latest componentized backdoor of the Confucius
+谁不是新能源车的第一批车主呢？田宫迷你四驱车动手装
+Anondoor discloses - The latest componentized backdoor of the Confucius
+隐秘的SERPENTINE#CLOUD恶意软件活动利用Cloudflare隧道进行内存驻留RAT投递
+16 Billion Passwords Stolen From 320 Million+ Computers Leaked Online
+Apache SeaTunnel Flaw Lets Unauthorized Users Launch Deserialization Attacks
+IBM QRadar SIEM Bug Lets Attackers Run Arbitrary Commands
+Amazon Linux 2023 achieves FIPS 140-3 validation
+Feeling Blue(Noroff): Inside a Sophisticated DPRK Web3 Intrusion
+MacOS hacking part 1: stealing data via legit Telegram API. Simple C example
+MacOS hacking part 2: classic injection trick into macOS applications. Simple C example
+AntiDot
+超9000应用具有鸿蒙独特功能
+Is Your CISO Ready to Flee? 
+What’s OpenID Connect (OIDC) and Why Should You Care?
+Aflac discloses breach amidst Scattered Spider insurance attacks
+Qilin offers “Call a lawyer” button for affiliates attempting to extort ransoms from victims who won’t pay
+Aflac discloses breach amidst Scattered Spider insurance attacks
+Exploring Netstalking – Mapping the Hidden Corners of the Internet
+GitPhish – OAuth Device Code Phishing for GitHub Repos, Secrets, and CI/CD
+Can users reset their own passwords without sacrificing security?
+Protezione dei dati personali e antitrust: due facce della stessa medaglia
+Sintesi riepilogativa delle campagne malevole nella settimana del 14 – 20 giugno
+Israele-Iran: cyber conflitto e Guerra 4.0. Altro che consapevolezza: è il tempo del fare
+手机之家向小米公开致歉
+Telecom Giant Viasat Is Latest Salt Typhoon Victim
+How Cyberwarfare Changes the Face of Geopolitical Conflict
+Cloudflare blocks record 7.3 Tbps DDoS attack against hosting provider
+Tonga Ministry of Health hit with cyberattack affecting website, IT systems
+Cybersecurity Snapshot: Tenable Report Spotlights Cloud Exposures, as Google Catches Pro-Russia Hackers Impersonating Feds
+Top 7 Ambient Listening AI Tools Revolutionizing Healthcare in 2025
+Microsoft investigates OneDrive bug that breaks file search
+Qilin Ransomware Adds 'Call Lawyer' Feature to Pressure Victims for Larger Ransoms
+PowerShell Loaders Use In-Memory Execution to Evade Disk-Based Detection
+wafinfo/DecryptTools: DecryptTools-综合解密
+US Pig Butchering Victims ‘Will’ Get Refunds — Feds Seize $225M Cryptocurrency
+BitoPro exchange links Lazarus hackers to $11 million crypto heist
+Threat Actors Exploit Vercel Hosting Platform to Distribute Remote Access Malware
+TxTag Phishing Campaign Exploits .gov Domain to Deceive Employees
+Steam Phishing: popular as ever
+Insomnia API Client Vulnerability Enables Arbitrary Code Execution via Template Injection
+Threat Actors Manipulate Google Search Results to Display Scammer’s Phone Number Instead of Real Number
+Judge overturns Biden-era HHS rule on HIPAA protections for those seeking reproductive care
+Tonic.ai Achieves HIPAA Compliance Certification, Ensuring Enhanced Security for Protected Health Information
+Your SOC Doesn’t Need More Alerts – It Needs a Brain
+Beware of Weaponized MSI Installer Masquerading as WhatsApp to Deliver XWorm RAT
+Mocha Manakin Uses Paste-and-Run Technique to Deceive Users into Downloading Malware
+Prometei Botnet Targets Linux Servers for Cryptocurrency Mining Operations
+Administrator Protection Review
+SUSTA-STAMPI
+Hackers Post Dozens of Malicious Copycat Repos to GitHub
+Cyberattack Disrupts Russian Dairy Supply Chain by Targeting Animal Certification System
+Hackers Target 700+ ComfyUI AI Image Generation Servers to Spread Malware
+cisin.com
+powells.biz
+diffazur.fr
+Sivim IT
+Disneyland Paris
+LinuxFest Northwest: The Geology of Open Source
+LinuxFest Northwest: The Intersectionality Of Human Psychology, Security And The Era Of AI And Misinfo
+januschke.at
+Vacation Myrtle Beach
+taoscounty.org
+Comelesa
+AXT
+Kibbutz Almog Hacked
+PCI DSS 4.0.1: What Changed and How is this the Next Step for Universal MFA
+35岁女生在字节跳动一天的花销
+FTP 530 Login Incorrect
+CVE-2025-49763 – Remote DoS via Memory Exhaustion in Apache Traffic Server via ESI Plugin
+The $4.88 Million Question: Why Password-Based Breaches Are Getting More Expensive
+Tonic Validate is now available on GitHub Marketplace!
+Help needed if possible
+FreeBuf周报 |  OpenAI探索国防领域AI应用；160亿条开放云存储登录凭证泄露
+Tonic Validate is now on GitHub Marketplace! (Part 2)
+AWS Enhances Cloud Security With Better Visibility Features
+女生毕设被螨虫啃食心态崩了
+MalChela v3.0: Case Management, FileMiner, and Smarter Triage
+iPhone检测针孔摄像头方法
+免杀EXE自动生成器破解与技术原理分析
+在陌生滴滴上捡到我掉了3个月的戒指
+小米严禁以任何形式诋毁竞品
+3 亿年前的全球暖化
+智能手机是人类的寄生物
+微软停止通过系统更新向Windows 11推送旧版驱动程序 避免安装过时版本
+Godfather Android trojan uses virtualization to hijack banking and crypto apps
+「悄悄发育」的华为 AI，这次放了个「大招」
+传苹果考虑收购Perplexity，恶补AI；微信测朋友圈评论表情包回复；Meta推出新智能眼镜，2900元起 | 极客早知道
+既然大家都在卷 AI 赛道，我继续搞点传统的吧！一个新的内网暴露工具： https://github.com/buhuipao/anyproxy - VEX
+16 Billion Passwords Leaked in the Biggest Breach Ever — Change Yours NOW
+$5,000 Bounty: How a Single Malformed UDP Packet Took Down Rootstock’s Blockchain Node (CVE-style…
+Automation for Smarter Bug Hunting
+Build Your Eye-Catching Resume Using JSON Resume
+How I Automated My Entire AWS Infrastructure Using Ansible : One Must Try
+Log Me Maybe: When Log Files Leaked Secrets I Wasn’t Meant to See ️
+Sending Push Notifications with Azure Notification Hub: A Beginner-Friendly Guide
+Stop Writing Terrible Spring Boot Code — 7 Mistakes That Are Slowing You Down (and How to Fix…
+The Ultimate Red Team Playbook: 20 Attack Techniques That Will Make You a Better Defender
+小米 性能
+WWDC25 在现场，我们听到了这些声音
+Enterprise Kubernetes Explained: How to Leverage K8s Effectively
+How NHIs Can Handle Your Security Needs
+Justify Your Investment in Advanced NHIs
+Stay Relaxed with Robust IAM Solutions
+Why Satisfied Teams Use Cloud Compliance Tools
+Automation for Smarter Bug Hunting
+Log Me Maybe: When Log Files Leaked Secrets I Wasn’t Meant to See ️
+$5,000 Bounty: How a Single Malformed UDP Packet Took Down Rootstock’s Blockchain Node (CVE-style…
+安普瑞斯多个电芯3C认证被暂停 罗马仕/安克/绿联等均使用其电芯
+Windows 11新版开始菜单类别样式：看着挺好但其实非常鸡肋
+Quando i tuoi dipendenti sono AGENTI. E forse a breve anche tu…
+Automation for Smarter Bug Hunting
+16 Billion Passwords Leaked in the Biggest Breach Ever — Change Yours NOW
+Build Your Eye-Catching Resume Using JSON Resume
+Log Me Maybe: When Log Files Leaked Secrets I Wasn’t Meant to See ️
+$5,000 Bounty: How a Single Malformed UDP Packet Took Down Rootstock’s Blockchain Node (CVE-style…
+How I Automated My Entire AWS Infrastructure Using Ansible : One Must Try
+The Ultimate Red Team Playbook: 20 Attack Techniques That Will Make You a Better Defender
+Stop Writing Terrible Spring Boot Code — 7 Mistakes That Are Slowing You Down (and How to Fix…
+Frida架构清明上河图，一张图感受Frida项目的庞大，17.2.4版本，133个仓库
+居心不良的求阴影面积
+让远程电脑成为你的AI助手 - Computer Use Agent 实践
+某米路由器漏洞挖掘分享
+高价值漏洞采集&推送工具
+Israel Says Iran Is Hacking Security Cameras for Spying
+Scattered Spider Behind Cyberattacks on M&S and Co-op, Causing Up to $592M in Damages
+Scattered Spider Behind Cyberattacks on M&S and Co-op, Causing Up to $592M in Damages
+CoinMarketCap Client-Side Attack: A Comprehensive Analysis by c/side
+由于担心欧盟找茬 苹果在欧盟将iPhone能效评级主动从A降低到B
+微软通过Windows 11家庭安全选项封禁谷歌浏览器 必须额外解锁才能使用
+The TechBeat: This Skill Gap Is Blocking Your Career (And It Has Nothing to Do with AI) (6/21/2025)
+Sending Push Notifications with Azure Notification Hub: A Beginner-Friendly Guide
+ADS &#x26; Python Tools, (Sat, Jun 21st)
+看雪学苑获评——华为终端安全2024年度优秀合作伙伴奖
+记一次成功的ollvm-fla简单魔改尝试
+【二十四节气】夏至 | 昼长夜短炎光盛，护航安澜伴岁悠
+伊朗政府关闭互联网以防御以色列无人机和网络攻击
+2025年公安部“净网”“护网”专项工作部署会召开
+.NET 2025年第 77 期工具库和资源汇总
+.NET 安全基础入门学习知识库
+.NET 通过 Windows 输入法接口注入执行 Shellcode
+I don't know how much time I'll be out of internet again
+Social Media CTF help needed
+Hellow please hack me? (Osint)
+Unexpected security footguns in Go's parsers
+Your passwords are everywhere: What the massive 16 billion login leak means for you
+CEN TS 18170:2025 per i servizi di archiviazione
+Iran confirmed it shut down internet to protect the country against cyberattacks
+Hack The Box: Titanic Machine Walkthrough – Easy Difficulty
+LinuxFest Northwest: The First Black Software Engineer in America: Technology and Race
+Iranian Hacktivist Attacking Israeli Military, Government, and Infrastructure Targets
+Long Links
+Microsoft Announces New Graph Powered Detection of Hybrid Attack Targeting Organizations
+Surge in XSS Cyberattacks Targets Popular Webmail Platforms, ESET Reports
+Open Directories Exposes Publically Available tools Used by Hackers
+doradosoftware.com
+Levinzon CPA
+Collision &amp; Classics
+ALFA Testing Equipment
+OAK PARK & RIVER FOREST HIGH SCHOOL
+Zacharia Levi Ltd Hacked
+rioglass-solar
+DuckDuckGo Browser’s Scam Blocker to Guard Against Phishing and Malware Sites
+CyberWarfare on the Rise With Surge in Hacktivist Activity Following Israel-Iran
+hello, I was wondering if anyone can help me get into my chromebook, i don't have the password and I'm not sure what to do to get into it.
+Aflac Cyber Attack – Hackers May Have Stolen Personal And Health Information
+Truth Social Crashes as Trump Live-Posts Iran Bombing
+Update on Shoeman Keeper Of Soles (This website was selling dead people’s shoes)
+Are Your Secrets Protected Against Data Breaches?
+How Secure Are Your Cloud-Based Non-Human Identities?
+Why Being Proactive with NHIs Can Save Your Business
+Mattermost Vulnerabilities Let Attackers Execute Remote Code Via Path Traversal
+SOC 2 vs SOC 3: Which Report Builds Public Trust?
+Israeli Social Media Users Targeted in Covert Iranian Influence Campaign
+以色列-伊朗“第二战场”网络战持续加速升级
+OpenVPN Driver Vulnerability Let Attackers Crash Windows Systems
+Used our private intel scraper (WRAITH) + SØPHIA overlays to locate a buried data hub during passive recon — AMA
+Prometei僵尸网络攻击Linux服务器进行加密货币挖矿
+linux-firmware >= 20250613.12fe085f-5 更新需要手动干预
+幕后 | 从 Delta 到 AltStore，一段「不走寻常路」的 iOS 开发故事
+Week in review: Keyloggers found on Outlook login pages, police shut down dark web drug market
+DDoS分布式拒绝服务攻击再创历史记录！有服务提供商被攻击流量高达7.3Tbps
+小米：YU7 将发，严禁诋毁竞品；罗永浩剧透 AI 产品 3 个月后见；贝佐斯「二婚婚礼」下周举办 | 极客早知道
+Please, God, Someone Help Me
+谷歌已开始测试在 Android 上安装 Chrome 扩展程序，但用起来一言难尽
+美军打击伊朗核设施事件综合分析评估
+揭秘美国在中东最大的军事基地
+Phase 2
+arcsight
+is there way where i can get acces to admins PIN or to simply extract the hash file of the admin?
+AWS Raises Expertise Bar for MSSP Partners
+AWS Raises Expertise Bar for MSSP Partners
+【漏洞复现】ActiveMQ中间件漏洞
+一年一图 ‖ 第六图 走向数据要素化安全象限图
+数字安全人才社区在京成立：精准对接人才供需，助力产业健康发展
+.NET内网实战：.NET 通过APC注入绕过终端安全防护
+.NET 安全攻防知识交流社区
+.NET 2025年第 77 期工具库和资源汇总
+Guerre di Rete - Iran, bombe e cyber
+16 Billion Leaked Records May Not Be a New Breach, But They’re a Threat
+The TechBeat: Kroger (Allegedly) Shared Sensitive Health Data With Meta - Now They're Being Sued (6/22/2025)
+Is Saylor running out of steam?
+16 Billion Leaked Records May Not Be a New Breach, But They’re a Threat
+Will AI Replace You — or Promote You? How to Stay Ahead
+WooCommerce/Wordpress anonymous webshop
+Beginner Malware Analysis: DCRat with dnSpy
+Will AI Replace You — or Promote You? How to Stay Ahead
+【资料】全球特定国家每日动态2025.6.22（新增马来西亚等东南亚国家）
+一个 $9000 的漏洞
+【资料】伊朗最新消息特别报道-2025年6月21日（阅读时请注意分辨内容里的双标）
+两小时给公司开发个新官网，来自 MiniMax 的震撼
+软件工程顶会——ICSE 2025 论文清单与摘要（上）
+软件工程顶会——ICSE 2025 论文清单与摘要（中）
+软件工程顶会——ICSE 2025 论文清单与摘要（下）
+论韧性数字安全体系（第十三章）
+how i now its a real link ?
+Ingress-NGINX 4.11.0 Remote Code Execution (RCE)
+MOBOTIX IP cameras Unauthenticated access
+Scattered Spider Targets Aflac, Other Insurance Companies
+Wisconsin Judicare
+fecovita.com
+rhodar.co.uk
+Ben Horin & Alexandrovitz Ltd
+Windows Snipping Tool now lets you create animated GIF recordings
+CoinMarketCap briefly hacked to drain crypto wallets via fake Web3 popup
+Oxford City Council suffers breach exposing two decades of data
+Russian hackers bypass Gmail MFA using stolen app passwords
+WordPress Motors theme flaw mass-exploited to hijack admin accounts
+What Satellite Images Reveal About the US Bombing of Iran's Nuclear Sites
+RAWPA - hierarchical methodology, comprehensive toolkits, and guided workflows
+RAWPA - hierarchical methodology, comprehensive toolkits, and guided workflows
+说唱僵尸网络RapperBot卷土重来，5万余台设备遭劫持
+精密DDoS攻击正重创全球银行业
+Feel Reassured with Advanced Secrets Scanning Technologies
+小米YU7本周正式发布
+伊朗国家电视台深夜遭劫持，反政府视频突现荧幕
+FreeBuf早报 | Asana MCP AI 连接器漏洞可能泄露企业数据；史上最大规模数据泄露事件涉及160亿条登录凭证
+安卓逆向-安卓开发基础
+shiro反序列化漏洞原理分析
+CVE-2025-32756: 管理API中的堆栈缓冲区溢出漏洞
+Java反序列化之cc6
+FreeBuf早报 | 史上最大规模数据泄露涉160亿条登录凭证；以色列-伊朗网络战攻防
+LinuxFest Northwest: Project Caua: Start Your Own Business, Be Your Own Boss
+小米YU7是先进SUV
+小米YU7流金粉
+派早报：安克召回部分移动电源
+Esp8266
+Medical device cyberattacks push hospitals into crisis mode
+71% of new hires click on phishing emails within 3 months
+Threat Casting a Nation State Attack on Critical Infrastructure Scenario at CognectCon2025
+A New Radiosonde Decoder and Tracker Program for Windows and RTL-SDR
+TechMinds: Testing out the SkyRoof Software for Receiving and Tracking Amateur Radio Satellites
+A YouTube Review of the SDRplay nRSP-ST Networked Receiver
+Fortinet发布全新AI驱动邮件安全解决方案组合，邮件安全产品矩阵再升级
+第五届数字安全大会完美收官，产业年度报告重磅发布
+峰值 7.3Tbps！Cloudflare 成功拦截史上最大 DDoS 攻击
+保险业安全警报：Aflac 美国网络异常，客户社保信息或遭窃
+俄罗斯动物产品认证系统遭网络攻击，致供应链中断
+Qilin 推出“呼叫律师”功能，施压受害者支付赎金
+房地产公司泄露了包含 17 万条明文个人身份信息的数据库
+牛津市议会遭遇网络攻击：在职及离任官员 21 年信息被盗
+俄罗斯比特币挖矿行业正在快速扩展 有望在几年后仅次于美国并与美国竞争
+微软更新Windows 11系统还原功能 将还原点保留时间从90天缩短到60天
+剪映国际版(CapCut)更新使用协议引起争议 默认授予字节任何使用权利且不可撤销
+iOS 26将支持公共Wi-Fi登录信息同步到其他设备 例如无需在iPad上重复登录
+ISC Stormcast For Monday, June 23rd, 2025 https://isc.sans.edu/podcastdetail/9500, (Mon, Jun 23rd)
+DASCTF 2025上半年赛 Writeup by Mini-Venom
+Quantum risk is already changing cybersecurity
+Review: Redefining Hacking
+CoinMarketCap Doodle Image Vulnerability Lets Attackers Run Malicious Code via API Call
+SteamOS 可以安装在其他掌机上了，但我建议还是先等等
+教父安卓木马利用虚拟化技术劫持银行与加密货币应用
+深入探索Java虚拟机的神秘接口：JVMTI
+TongWeb闭源中间件代码审计
+由 Mybatis 源码畅谈软件设计（八）：从根上理解 Mybatis 二级缓存
+How CISOs can justify security investments in financial terms
+$7,500 Bounty: Exposed Proxy on Reddit Allowed External Access to Internal Domains
+API again: Org Takeover
+Browser-in-the-Browser: The New Phishing Frontier
+Bypassing Filters via XML Encoding to Perform SQL Injection for Bug Hunting with BurpSuite
+Cheese CTF: TryHackMe WriteUp
+DNS Records
+Hackers Assemble: The Vulniverse Saga
+NTLM Explained in Under 5 Minutes (And Why You Should Care)
+OSCP: Proving Grounds — Payday
+Palo Alto Wireshark Quiz — January 2023
+Amazon EKS Flaws Expose AWS Credentials and Enable Privilege Escalation
+Critical Meshtastic Flaw Allows Attackers to Decrypt Private Messages
+Need some help to reverse engineer a closed source application
+Anubis勒索软件添加擦除器以彻底摧毁目标文件
+深入探索Java虚拟机的神秘接口：JVMTI
+由 Mybatis 源码畅谈软件设计（八）：从根上理解 Mybatis 二级缓存
+TongWeb闭源中间件代码审计
+测试显示YouTube利用假缓冲技术故意使视频延迟10秒加载惩罚拦截广告的用户
+机构预测小米 YU7 定价 25 万；美媒揭秘 1999 美元「美国制造」手机；特斯拉Robotaxi 正式上线 | 极客早知道
+虚拟机检测样本分析
+电子数据取证分析师考试来袭，速看通知！
+微步斩获新质百强&安全DNS双领航者，多场景获推荐
+.NET 通过 LINQ 投影实现无需 cmd.exe 的交互式 WebShell
+.NET 介绍一种新型 RCE 利用点分析与漏洞挖掘思路
+.NET 2025年第 77 期工具库和资源汇总
+权限过高的容器通过未加密API暴露AWS凭证
+WormGPT Variants Powered by Grok and Mixtral Have Emerged 
+Windows Snipping Tool Now Lets Users Export Captures as GIFs
+Career?
+Instagram Chats
+EPSS is a lagging indicator. VEDAS gives early warning by tracking and scoring exploitable vulnerabilities.
+Critical Langflow Vulnerability (CVE-2025-3248) Actively Exploited to Deliver Flodrix Botnet
+Former JBLM Soldier Admits Attempting to Leak U.S. Military Network Details to China
+Stealthy backdoor found hiding in SOHO devices running Linux
+SadFuture: Mapping XDSpy latest evolution
+Analysis of Amatera Stealer v1 (Test build)
+From SambaSpy to Sorillus: Dancing through a multi-language phishing campaign in Europe
+SparkKitty, SparkCat’s little brother: A new Trojan spy found in the App Store and Google Play
+SparkKitty, SparkCat’s little brother: A new Trojan spy found in the App Store and Google Play
+$7,500 Bounty: Exposed Proxy on Reddit Allowed External Access to Internal Domains
+Hackers Assemble: The Vulniverse Saga
+$2,162 Bounty: CVE-2024–56374 — DoS in Django’s IPv6 Validation
+梆梆安全鸿蒙应用加固双路径发布：源码级与二进制级精准防护
+【梆梆安全监测】安全隐私合规监管趋势报告（5月11日-6月7日）
+「华云安」完成数千万元B+轮融资，加速构建「平台化」+「智能化」安全防御体系
+时隔 14 个月，Listen1 竟然更新了！
+NTLM Explained in Under 5 Minutes (And Why You Should Care)
+$7,500 Bounty: Exposed Proxy on Reddit Allowed External Access to Internal Domains
+API again: Org Takeover
+Palo Alto Wireshark Quiz — January 2023
+DNS Records
+OSCP: Proving Grounds — Payday
+[2025]Windows的内存防护机制
+Browser-in-the-Browser: The New Phishing Frontier
+Bypassing Filters via XML Encoding to Perform SQL Injection for Bug Hunting with BurpSuite
+WormGPT Variants Powered by Grok and Mixtral Have Emerged
+Web逆向之VMP还原全流程
+《个人信息安全规范》修订思考之二：个人信息保护目标的“惑”与“解”
+Anubis勒索软件添加擦除器以彻底摧毁目标文件
+「华云安」完成数千万元B+轮融资，加速构建「平台化」+「智能化」安全防御体系
+安全动态回顾|假Minecraft模组成攻击工具玩家系统被远程控制 黑客利用高级Web注入和反分析技术部署Amatera窃取程序
+实战赋能·智领未来 | 网络安全实战人才培养交流会圆满收官！
+午夜之锤行动复盘与评估：解构美国对伊朗核设施精确打击的情报战
+Burpsuite+Proxifier抓取程序数据包
+Zooming through BlueNoroff Indicators with Validin
+Tweet about wiper deployed against Albania by Druidfly
+Kids Online Safety Act (KOSA): Protecting Kids or Censorship?
+Securing ACH Against Emerging Authentication Bypass Methods 
+Microsoft Family Safety Now Blocking All Versions of Google Chrome
+小米YU7
+Burpsuite+Proxifier抓取程序数据包
+A week in security (June 15 &#8211; June 21)
+Gestione incidenti ICT: i 6 criteri di classificazione e soglie di rilevanza per valutarne la gravità
+Patente a crediti per la sicurezza sul lavoro: il Garante Privacy spiega cosa correggere
+币圈资讯网站CoinTelegraph遭到黑客劫持并弹出虚假的ICO融资融币进行诈骗
+伊朗国际互联网连接正在逐渐恢复 但存在较大波动且只有平时1/10
+Closing the Gap Between AI Ambition and Enterprise Reality 
+Stop Blaming CVSS: The Real Problem in Vulnerability Management is Us 
+⚡ Weekly Recap: Chrome 0-Day, 7.3 Tbps DDoS, MFA Bypass Tricks, Banking Trojan and More
+Taiwan Is Rushing to Make Its Own Drones Before It's Too Late
+晋江崩了
+/r/ReverseEngineering's Weekly Questions Thread
+A family of forks
+PoC 2025 – Reversing Modern Binaries: Practical Rust & Go Analysis On-site Training
+这是一个拥有上千份SRC报告+工具脚本+各类学习资料的挖洞技术智库
+[更新][错误修订] 腾讯云EdgeOne免费CDN套餐开始要求实名认证
+Rethinking Identity: IAM, PAM & Passwordless Trends from Identiverse - David Lee, Amit Masand, Chip Hughes, Ashley Stevenson, John Pritchard, Matt Caulfield - ESW #412
+The financial impact of Marks & Spencer and Co-op cyberattacks could reach £440M
+Iran-Linked Threat Actors Cyber Fattah Leak Visitors and Athletes’ Data from Saudi Games
+Cheese CTF: TryHackMe WriteUp
+Hackers Assemble: The Vulniverse Saga
+Closing the Gap Between AI Ambition and Enterprise Reality
+Stop Blaming CVSS: The Real Problem in Vulnerability Management is Us
+Securing ACH Against Emerging Authentication Bypass Methods
+Kids Online Safety Act (KOSA): Protecting Kids or Censorship?
+《AI赋能主动防御应用指南（2025版）》报告暨代表性厂商评估调研启动
+BAZZAFL：通过面向漏洞的种子分组将模糊测试活动导向漏洞
+2025年“净网”“护网”专项工作部署会召开；巴黎迪士尼被曝遭遇勒索软件攻击，泄露64GB工程数据 | 牛览
+热点追踪+精准解读——火山引擎 AI 域名推荐上线！
+打响人生第一洞 | 造浪福利季开启！
+奖金限时再翻倍 | 补天专属厂商“58到家SRC”发布活动！
+OpenVPN驱动曝严重漏洞，可致Windows系统崩溃
+南方科技大学 | Set-level Guidance Attack: 提升视觉语言预训练模型的对抗迁移性
+谛听 | 伊以网络战持续发酵：伊朗工业协议暴露骤降
+人工智能安全治理 | 《人工智能安全治理框架》加快人工智能风险治理
+新安全 新价值|第五届数字安全大会成功召开
+行业动态 | 中国电科发布“衡”系列安全解决方案与“量铠”抗量子密码系列产品
+华云安完成数千万元B+轮融资，加速构建「平台化」+「智能化」安全防御体系
+Python标准库tarfile模块存在任意文件写入高危漏洞，PoC已公开
+这是一个拥有上千份SRC报告+工具脚本+各类学习资料的挖洞技术智库
+Critical Citrix NetScaler bug fixed, upgrade ASAP! (CVE-2025-5777)
+Google Adds Multi-Layered Defenses to Secure GenAI from Prompt Injection Attacks
+Hackers Allegedly Selling Intelbras Router 0-Day Exploit on Dark Web Forums
+Microsoft Reduces Windows 11 24H2 Restore Point Retention from 90 to 60 Days
+Steel Giant Nucor Suffers Cyberattack, IT Systems Breached
+Stellar Repair For Outlook: A Comprehensive Review Of The Ultimate PST Repair Tool
+社工钓鱼：理解、方法与技术防范
+Docker 拉取镜像n8n超时？其实是你没让它“连网”
+派评 | 近期值得关注的 App
+现在是入手拓竹 H2D 的好时候吗？
+社工钓鱼：理解、方法与技术防范
+Docker 拉取镜像n8n超时？其实是你没让它“连网”
+Amazon’s Schmidt talks China, cyber traps and the battle in the cloud
+Steel giant Nucor confirms hackers stole data in recent breach
+How AI-Enabled Workflow Automation Can Help SOCs Reduce Burnout
+Linux-Based Firewall IPFire 2.29 Rolls Out Update 194 with Improved VPN Features
+Microsoft Enhances Defender for Office 365 with Detailed Spam and Phishing Analysis
+NCSC Issues Alert on ‘UMBRELLA STAND’ Malware Targeting Fortinet FortiGate Firewalls
+BforeAI Named 2025 Technology Pioneer by the World Economic Forum
+Google Adds Multi-Layered Defenses to Secure GenAI from Prompt Injection Attacks
+⚡ Weekly Recap: Chrome 0-Day, 7.3 Tbps DDoS, MFA Bypass Tricks, Banking Trojan and More
+Cnil: le condizioni per il legittimo interesse nello sviluppo AI, focus sul web scraping
+Largest DDoS Attack to Date
+CoinMarketCap, Cointelegraph compromised to serve pop-ups to drain crypto wallets
+Data of more than 740,000 stolen in ransomware attack on Michigan hospital network
+Okta Introduces Cross App Access to Secure AI Agents in Enterprise
+A CISO's AI Playbook
+BlueNoroff Hackers Exploit Zoom App to Deploy Infostealer Malware in Targeted Attacks
+Confucius Hackers Target Government and Military Entities Using WooperStealer Malware
+Critical Teleport Vulnerability Allows Remote Authentication Bypass
+16 Billion Stolen Logins for Apple, Google, Facebook and More: How to Stay Safe
+Android and the mysteries of dial codes ​ – Extracting dial codes by apk reversing
+Mitre Hardware Additions T1200 - Emulate the attacks
+American steel giant Nucor confirms data breach in May attack
+The Great Office Debate: Are RTO Mandates Really About Collaboration or Control?
+I Churned Out 15 AI Features in 6 Months and It Nearly Broke Us. Here's Our Story
+The TechBeat: Everything You Trust Is Built on GPS. That’s a Huge Problem. (6/23/2025)
+The Truth Algorithm: From Fire Circles to ChatGPT, a History of Thought Engineering
+New Biome Release Offers Faster Linting With TypeScript-Like Precision
+Chinese AI Model Promises Gemini 2.5 Pro-level Performance at One-fourth of the Cost
+Breaking Down the AI Agent Tech Stack
+窃密器数据如何“点燃”CVE-2025-49113：RoundCube的漏洞利用
+关于手表版本 apk 逆向分析过程
+6月28日北京见！三六零天御·亚马逊云科技安全合规沙龙
+Cloudflare 拦截 7.3Tbps 史上最大 DDoS 攻击
+论坛·原创 | 开源人工智能治理的全球实践及路径选择
+行业 | 志翔智慧电力赋能，“身边安全隐患”及时察知
+聚焦 | 第五届数字安全大会在京召开
+60+ GitHub 仓库被用于软件供应链攻击中
+行业 | 中国电科发布“衡”系列安全解决方案与“量铠”抗量子密码系列产品
+北京市开展11个民生消费领域数据安全和个人信息保护专项整治（附自查清单）
+WordPress Motors 主题漏洞被大规模用于劫持管理员账号
+Trustwave报告：酒店业成网络攻击重灾区 勒索钓鱼WIFI漏洞齐发
+「华云安」完成数千万元B+轮融资，加速构建「平台化」+「智能化」安全防御体系
+新安全 新价值|第五届数字安全大会成功召开
+超 550 亿 USDT 流转背后的汇旺支付(HuionePay) 链上数据分析
+双倍奖金！X 夏日漏洞悬赏计划启动！
+CNVD漏洞周报2025年第23期
+上周关注度较高的产品安全漏洞(20250616-20250622)
+Okta Cross App Access secures AI agents in the enterprise
+Israeli officials say Iran exploiting security cameras to guide missile strikes
+A Multimillion-Dollar Risk: How CEOs Can Better Assess Cybersecurity Threats
+A Clicking Time Bomb: What To Do About Repeat Clickers
+FTC States That Scams Cost U.S. Consumers $158.3 Billion in One Year
+McLaren Health Care says data breach impacts 743,000 patients
+XDigo Malware Exploits Windows LNK Flaw in Eastern European Government Attacks
+DDoS Attack on Financial Sector Triggers Multi-Day Service Outages
+North Korean Hackers Weaponize GitHub Infrastructure to Distribute Malware
+SparkKitty Targets iOS and Android Devices via App Store and Google Play Attacks
+Gmail&#8217;s multi-factor authentication bypassed by  hackers to pull off targeted attacks
+Understanding Content Security Policy (CSP)
+Subresource Integrity (SRI)
+Data of more than 740,000 stolen in ransomware attack on Michigan hospital network
+The Week in Vulnerabilities: BeyondTrust, Veeam Fixes Urged by Cyble
+XDigo Malware Exploits Windows LNK Flaw in Eastern European Government Attacks
+How AI-Enabled Workflow Automation Can Help SOCs Reduce Burnout
+Steel giant Nucor confirms hackers stole data in recent breach
+Amazon’s Schmidt talks China, cyber traps and the battle in the cloud
+Can I copy a library key card?
+Paraguay’s Biggest Data Breach: Infostealers Fuel Massive 7.4M Citizen Data Leak
+Novel SSRF Technique Involving HTTP Redirect Loops
+McLaren Health Care data breach impacted over  743,000 people
+How Exposure Management Helps Communicate Cyber Risk
+Vibe Coding Explained in 5 Levels of Sophistication
+Okta Introduces Cross App Access to Secure AI Agents in Enterprise
+A Multimillion-Dollar Risk: How CEOs Can Better Assess Cybersecurity Threats
+【倒计时7天】新人额外加成UPUP！额外60%和超多奖励等你拿！
+由403所发现的SSRF高危漏洞
+G.O.S.S.I.P 阅读推荐 2025-06-23 CompileAgent的工作与潜力
+推荐阅读：论韧性数字安全体系
+一年一图 ‖ 第六图 走向数据要素化安全象限图
+Microsoft will start removing legacy drivers from Windows Update
+Attackers Use Docker APIs, Tor Anonymity in Stealthy Crypto Heist
+Canada says Salt Typhoon hacked telecom firm via Cisco flaw
+Revil ransomware members released after time served on carding charges
+McLaren Health Care Data Breach Exposes Personal Information of 743,000 Individuals
+Transforming Photos with ChatGPT Prompt : A Cinematic Double Exposure in a Post-Apocalyptic World
+Achieving FedRAMP® High: What It Means and Why It Matters
+Iran-linked cyberattack reportedly disrupts public services in Albania’s capital
+华为开发者大会2025
+How Exposure Management Helps Communicate Cyber Risk
+Speaker Proposal Deadline Approaches for OpenSSL Conference 2025 in Prague
+US Homeland Security warns of escalating Iranian cyberattack risks
+DHS Warns Pro-Iranian Hackers Likely to Target U.S. Networks After Iranian Nuclear Strikes
+Echo Chamber Jailbreak Tricks LLMs Like OpenAI and Google into Generating Harmful Content
+Dairy Farmers of America
+Fisher59
+etoscapitalasia.com
+Ovalstrapping
+Telcom Insurance Group
+Telegram Purged Chinese Crypto Scam Markets—Then Watched as They Rebuilt
+Navigating cyber risks with Microsoft Security Exposure Management eBook
+Iran Cyber Threat Assessment and Defensive Guidance
+Simbian Advances the AI Frontier With Industry’s First Benchmark for Measuring LLM Performance in the SOC
+Malware on Google Play, Apple App Store stole your photos—and crypto
+1inch rolls out expanded bug bounties with rewards up to $500K
+LinuxFest Northwest: Barbie’s Journey –  A CI/CD Tale Of Transformation
+Randall Munroe’s XKCD ‘Exoplanet System’
+Removing the Firewall Barrier to Zero Trust Network Segmentation
+DHS Warns of Rise in Cyberattacks in Light of US-Iran Conflict
+1inch rolls out expanded bug bounties with rewards up to $500K
+RapperBot Targets DVRs to Hijack Surveillance Cameras and Record Video
+Shadow Vector Malware Uses SVG Images to Deliver AsyncRAT and RemcosRAT Payloads
+LinuxFest Northwest:  Applying The Hybrid Threat Modeling Method
+Zero Trust Security Model: Key Strategies, Benefits, and Implementation Best Practices
+'Echo Chamber' Attack Blows Past AI Guardrails
+APT36 Hackers Target Indian Defense Personnel with Sophisticated Phishing Campaign
+Google Integrates GenAI to Counter Indirect Prompt Injection Attack Vectors
+UAC-0001 Hackers Target ICS Devices Running Windows-Based Server Systems
+Researchers say cybercriminals are using jailbroken AI tools from Mistral and xAI
+Citrix Patches Critical Vulns in NetScaler ADC and Gateway
+Israel Job Info Ltd Hacked
+Estes Forwarding Worldwide
+Agganis Driving School
+Hilliard Enterprises
+Brown & Winters
+Brown & Brown PC
+Heightened Cyber Threat from Iran Sparks Urgent Calls for Vigilance and Mitigation
+The Interoperability Crisis in HealthTech: Can AI Help Connect the Dots?
+SparkKitty Swipes Pics From iOS, Android Devices
+APT28 hackers use Signal chats to launch new malware attacks on Ukraine
+Gain Confidence in Your IAM Strategy with NHIs
+Is Your Team Capable of Managing NHIs Effectively?
+JWT Security in 2025: Critical Vulnerabilities Every B2B SaaS Company Must Know
+Keeping Your Cloud Data Safe with Better NHI Practices
+OpenAI Used Globally for Attacks – FireTail Blog
+Optimistic About Cloud Compliance? Boost It with NHIs
+字节跳动100元餐标的免费三餐
+新型'回音室'越狱技术可诱使OpenAI和谷歌大模型生成有害内容
+FreeBuf早报 | 逾10万个网站因MCP漏洞面临权限提升攻击风险；精密DDoS攻击正重创全球银行业
+Bulletproof Security Workflows with Grip’s Jira Integration
+Successful Military Attacks are Driving Nation States to Cyber Options
+.NET 2025年第 77 期工具库和资源汇总
+勒索软件防范的探索与实践｜证券行业专刊3·安全村
+倒计时！中国网络安全年鉴2025·调研及案例征集
+.NET WPF 下的新思路，通过 XAML 实现代码执行
+.NET内网实战：.NET 通过APC注入绕过终端安全防护
+美安全部警报：亲伊朗黑客或袭击美国网络系统
+谷歌部署多层防御机制​​ ​，全面防护生成式 AI 系统提示注入攻击​
+FreeBuf热门电台精选集第九期
+台湾加密货币交易所币托公布被黑调查结果：员工被朝鲜拉撒路集团钓鱼
+微软开始在Xbox PC版中测试聚合游戏库 预计将支持Steam等应用购买的游戏
+真是意外！豺狼座出现新星爆发 视星等在6左右可以肉眼观测
+朝鲜黑客组织利用GitHub和Dropbox发动定向鱼叉式钓鱼攻击
+NCSC发现针对FortiGate防火墙的隐蔽反向SSH与DoH后渗透工具
+FreeBuf热门电台精选集第九期
+XDigo恶意软件利用Windows LNK漏洞攻击东欧政府机构
+小米MIXFlip2真好看
+派早报：QQ 超级会员话费会员业务终止，联发科发布天玑 8450 芯片等
+China-linked Salt Typhoon Exploits Critical Cisco Vulnerability to Target Canadian Telecom
+The real story behind cloud repatriation in 2025
+Cybersecurity jobs available right now: June 24, 2025
+小米MIXFlip2满分小折
+A Video Tutorial on Setting up RTL-SDR ADS-B Reception with Dump1090 and Virtual Radar Server
+超过46000个Grafana实例暴露于账户接管漏洞
+国产 AI 网页开发工具：豆包 AI 编程简单测评
+钢铁巨头纽柯确认黑客窃取了少量数据
+俄 APT 组织借 Signal 聊天投毒，乌克兰遭新型恶意软件袭​击
+以色列官员紧急呼吁：伊朗劫持安全摄像头引导导弹精准打击​
+迈凯伦医疗数据再度失守，75 万患者信息外泄​
+64GB 迪士尼数据“意外”落入勒索组织手中​
+年逾 130 万英镑设备失踪，英国政府成“泄密重灾区”
+黑客组织泄露沙特运动会数据，据称系伊朗策划
+马斯克现身YC大会：谈“智能大爆炸”时代的生存法则，结合PayPal、SpaceX、特斯拉、xAI创业史，详解如何使用第一性原理
+微软设定 Windows 11 系统还原点的有效时间为 60 天
+微软更新Windows 11测试版 支持将音量/亮度指示器放到屏幕顶部中央位置
+苹果中国官方商城和线下零售店支持国补 最高补贴2,000元(仅支持北京/上海)
+英特尔显卡中的安全缓解措施导致性能损失20% Ubuntu正在考虑解除该限制
+iOS 26新的恢复助手可以通过无线连接借助正常的iPhone或iPad进行固件恢复
+苹果推出iOS 26 Beta 2版 改进控制中心的模糊效果提升可读性并增加新铃声
+苹果在macOS Tahoe 26 Beta 2中恢复菜单栏背景切换 避免无法看清菜单栏内容
+ISC Stormcast For Tuesday, June 24th, 2025 https://isc.sans.edu/podcastdetail/9502, (Tue, Jun 24th)
+CVE-2025-32978 - Quest KACE SMA Unauthenticated License	Replacement
+CVE-2025-32977 - Quest KACE Unauthenticated Backup Upload
+CVE-2025-32976 - Quest KACE SMA 2FA Bypass
+CVE-2025-32975 - Quest KACE SMA Authentication Bypass
+RansomLord (NG v1.0) anti-ransomware exploit tool
+Disclosure Yealink Cloud vulnerabilities
+Notepad++漏洞PoC发布：可提权至SYSTEM权限
+Notepad++ 漏洞可致攻击者获取系统完全控制权
+Iranian Cyber Threat Escalation: Preparing for Asymmetric Response through Adversarial Validation Emulation
+Reconmap: Open-source vulnerability assessment, pentesting management platform
+Why work-life balance in cybersecurity must start with executive support
+小米15SPro一个月实测分享
+AI 工具穷鬼套餐：如何用每月 1 元立省 5000 元 AI 软件订阅费
+China-linked Salt Typhoon Exploits Critical Cisco Vulnerability to Target Canadian Telecom
+New Echo Chamber Attack Breaks AI Models Using Indirect Prompts
+Notepad++ Vulnerability Allows Full System Takeover — PoC Released
+炎炎夏日 | 2025·看雪周边T恤火热开售！
+论坛·原创 | 构建可信人工智能评价新体系，促进全球可信应用
+Barracuda Managed Vulnerability Security identifies and prioritizes vulnerabilities
+Common Good Cyber Fund launches to support nonprofits protecting the internet
+High-risk WinRAR RCE vulnerability patched, update quickly! (CVE-2025-6218)
+ManageEngine helps MSPs manage day-to-day operations
+Linux Foundation launches Agent2Agent, a protocol that enables agentic AI interoperability
+Trojanized SonicWall NetExtender app exfiltrates VPN credentials
+NATO Summit in The Hague hit by potential sabotage as rail cables set on fire
+Russia releases REvil members after convictions for payment card fraud
+Social engineering and Signal chats led to new Russian malware attacks, Ukraine says
+小米悠悠去世
+Decoding SSTV Transmissions from the QO-100 Satellite
+SDR ProTrack: Android Radio Direction Finding with RTL-SDR and Directional Antennas
+AI 上新｜3 秒钟，我用 YouWare，手搓了一个「Win98 版」极客公园
+雷军：将发布面向下一个时代的智能设备；特斯拉无人出租车安全问题引发关注；微信新版语音界面「丑」上热搜 | 极客早知道
+银狐黑产组织最新免杀变种样本分析
+【车贷欺诈】传销式购车欺诈场景分析
+The Dark Side of Azure Identity & Access Management – 5 IAM & Entra ID Security Risks You Can’t Ignore
+Middle East Cyber Escalation: From Hacktivism to Sophisticated Threat Operations
+semi-experienced kid
+Beginner wants to learn hacking
+Need advice on some programs
+social engineering passsword
+️ Stop API Key Leaks Before They Cost You — Meet KeySentry
+How to Write a Perfect Bug Bounty Report (with Examples)
+How an OAuth Misconfiguration Led to Token Leakage
+Lost and Found: How Deleted User Accounts Were Still Alive in the System ️
+Shortcuts to Shells: How Symbolic Links Led to Arbitrary File Reads
+Blockchain and Web3 Smart Contract Exploits: The Next Frontier in Bug Hunting
+Next.js CVE-2025–29927 hackinghub walkthrough
+OpenSpeedy：游戏变速齿轮
+Java Chains：Java安全payload生成与利用
+印度维持对加密货币交易征税30%的决定 不支持亏损抵扣 逃税会被翻倍罚款
+不少用户免费领取的Perplexity Pro年度订阅被回收 但好歹还没有封号
+微软又忘记续签/更新TLS证书 导致部分Office用户频繁出现证书过期弹窗
+有网友使用Cloudflare R2免费套餐但被开出5,400万美元的天价账单
+谷歌将AI代理协议A2A捐赠给Linux基金会 消除潜在的垄断和竞争担忧
+DIY or outsourced bug bounty programs: what’s best for your business?
+China-linked APT Salt Typhoon targets Canadian Telecom companies
+U.S. warns of incoming cyber threats following Iran airstrikes
+️ Stop API Key Leaks Before They Cost You — Meet KeySentry
+AI closing the loop, CTI to Simulations and hunting
+80% of Phishing Clues Are in the Header, PhishHound Finds Them with YAML Logic
+What is TTL (Time To Live)?
+Inside the MSHTML Exploit: A SOC Analyst’s Walkthrough of CVE-2021–40444
+How to Write a Perfect Bug Bounty Report (with Examples)
+How an OAuth Misconfiguration Led to Token Leakage
+Lost and Found: How Deleted User Accounts Were Still Alive in the System ️
+Typora 1.10.8公钥替换
+台海热点诱饵！旺刺组织结合 0day 和 ClickOnce 技术开展间谍活动
+嘶吼安全产业研究院 | 2025中国网络安全「金融行业」优秀解决方案汇编
+超过46000个Grafana实例暴露于账户接管漏洞
+特朗普如何将美国拖入伊朗战争的惊天内幕
+韩国总统李在明上任初期内阁人事全面分析
+WinRAR目录遍历漏洞允许通过恶意文件执行任意代码
+小岛秀夫的故事继续：《死亡搁浅 2：冥滩》初见感受
+LuaJIT trickery
+Oltre la tempesta | Alleanze e tecnologie per la difesa digitale
+Malware Analysis - Inside Lumma Stealer
+U.S. House Bans WhatsApp on Official Devices Over Security and Data Protection Issues
+APT28 Uses Signal Chat to Deploy BEARDSHELL Malware and COVENANT in Ukraine
+矿机芯片制造商嘉楠耘智宣布退出AI芯片业务 重新专注于比特币矿机
+How Fuzzing Barcodes Raises the Bar for Secure Code - Artur Cygan - ASW #336
+Using AI to Identify Patterns in Vishing Attempts
+NSFOCUS was Selected as a Representative Provider of Gartner® “Innovation Insight: Adversarial Exposure Validation in China”
+Unstructured Data Management: Closing the Gap Between Risk and Response
+安全视角下的低空经济发展路径
+美国国土安全部警告：美伊紧张局势升级，亲伊朗黑客可能报复性攻击美国网络；研究显示：为自保，96%主流AI模型选择勒索行为 |牛览
+教您如何构建“韧性安全体系”
+雷神众测漏洞周报2025.6.16-2025.6.22
+顶会入选 | ObfusLM - 基于参数混淆的语言模型隐私保护训推方案入选 ACL 25
+国防科技大学 | DeepGo：预测性定向灰盒模糊测试
+Windows的“神经中枢”：注册表安全攻防全解析
+《全球数据泄露态势月度报告》（2025年5月）| 附下载地址
+论韧性数字安全体系（第十三章）
+Decripting msg.database.14
+Is there anyone that can help?
+FreeBuf赠书活动 | 经典升级，《零信任网络：在不可信网络中构建安全系统（第2版）》
+社区速递 098 | 一周热评、派友最爱的口碑改编剧、社区文章与新玩意
+Memory Analysis Package 0.4
+Attacchi informatici, l’Iran potrebbe colpire le aziende
+Cyber security e innovazione: l’equilibrio è possibile
+Privacy e accessibilità: due pilastri per la libertà individuale nella società digitale
+Hackers Exploit Misconfigured Docker APIs to Mine Cryptocurrency via Tor Network
+Here’s a Subliminal Channel You Haven’t Considered Before
+The Dark Side of Swagger UI: How XSS and HTML Injection Can Compromise APIs
+macOS Tahoe 兼容性检测：这次又要“卡”掉多少老设备？
+Russia-linked APT28 use Signal chats to target Ukraine official with malware
+Why the Pentagon Is Using AI to Simulate Future Pandemics
+1inch Rolls Out Expanded Bug Bounties With Rewards Up To $500K
+What You See Isn't Always What You Get: The Hidden Strategy Behind Product Design
+The TechBeat: This College Student Wanted Privacy - His College Couldn't Give Him Any (6/24/2025)
+Closing the Feedback Loop: Building AI That Learns from Its Users
+GPT-2 Architecture and Training Details: Parameters & Cross-Entropy Loss
+Theoretical Derivations: Cross-Entropy Loss and Energy Functions in LLMs
+The Dark Side of Swagger UI: How XSS and HTML Injection Can Compromise APIs
+WebSocket Attacks — The protocol that dances under your security radar (POC inside)
+DataKrypto and Tumeryk Join Forces to Deliver World’s First Secure Encrypted Guardrails for AI LLMs and SLMs
+Fortifying Retail Security: Practical Steps to Prevent Cyberattacks
+Role of AI in Vulnerability Management
+【落地有声】专栏第五期：商业银行新一代核心业务系统上线前的安全攻略
+短视频网站滑块分析
+论韧性数字安全体系（第十三章）
+WinRAR现高危漏洞，恶意文件可致远程代码执行
+有你常用的吗？哈啰、红果免费短剧、一点资讯等45款App被通报
+通知 | 《人工智能生成合成内容标识方法 文件元数据隐式标识 文本文件（征求意见稿）》等6项网络安全标准实践指南公开征求意见
+关注 | 中考季，警惕“信息窃贼”！
+屡屡泄露客户个人信息，电信巨头赔偿近13亿元
+美国网络司令部如何支持美军对伊朗核设施的空袭行动？
+一次情报更新引发的DNSLOG告警排查
+破局与融合：破解开发与供应链安全的业务场景难题
+中小企业必读：抵御毁灭性DDoS攻击实战指南
+Go语言红队应用：CGO实现的ELF加载器
+How to Spot Registry Abuse by Malware: Examples in ANY.RUN Sandbox
+Social engineering and Signal chats led to new Russian malware attacks, Ukraine says
+NATO Summit in The Hague hit by potential sabotage as rail cables set on fire
+Hacktivists Launch DDoS Attacks at U.S. Following Iran Bombings
+Researchers Find Way to Shut Down Cryptominer Campaigns Using Bad Shares and XMRogue
+Hackers Target Over 70 Microsoft Exchange Servers to Steal Credentials via Keyloggers
+Between Buzz and Reality: The CTEM Conversation We All Need
+Roast my resume. 1st year of an Associates in Cybersecurity. I’m applying to help desk roles. Thanks for the help!
+Please help out looking for call flooding or anything
+The Attack Vector: Database Triggers as Persistence Mechanisms
+Remote code execution in CentOS Web Panel - CVE-2025-48703
+Android and the mysteries of dial codes ​ – Extracting dial codes by apk reversing
+Identity saw a large push for MFA in 2024, but now that bad actors are stealing credentials, what’s next?
+OpenList 白嫖网盘空间 (开源 Alist 替代品) - 支持 WebDAV 挂载百度/阿里/夸克/115等
+Application and API Security Can’t Rely Solely on Perimeter Defenses or Scanners | Notes on Gartner AppSec Research | Contrast Security
+The Security Fallout of Cyberattacks on Government Agencies
+独特的Js接口测试方式
+360安全智能体入选“优秀解决方案” 树立大模型赋能行业新标杆
+奇安信集团与河南警察学院网络安全系签约 携手推进公安大模型与数据安全
+十年十二问：2025
+从网络空间看伊朗断网事件
+APT-C-06（DarkHotel）利用BYOVD技术的最新攻击活动分析
+论韧性数字安全体系（第十三章）
+PentestGPT Setup Guide: Complete AI Penetration Testing
+Java Chains：Java安全payload生成与利用
+WinRAR目录遍历漏洞允许通过恶意文件执行任意代码
+FreeBuf赠书活动 | 经典升级，《零信任网络：在不可信网络中构建安全系统（第2版）》
+jackson的二次反序列化分析
+打穿AD域漏洞CVE-2025-33073的矛与盾 - 域安全
+DataKrypto and Tumeryk Join Forces to Deliver World’s First Secure Encrypted Guardrails for AI LLMs and SLMs
+How Today’s Pentest Models Compare and Why Continuous Wins
+Fortifying Retail Security: Practical Steps to Prevent Cyberattacks 
+How to effectively rotate secrets to improve security and efficiency
+NSFOCUS was Selected as a Representative Provider of Gartner® “Innovation Insight: Adversarial Exposure Validation in China”
+Role of AI in Vulnerability Management
+The Security Fallout of Cyberattacks on Government Agencies
+Unstructured Data Management: Closing the Gap Between Risk and Response
+Using AI to Identify Patterns in Vishing Attempts
+Oh! Canada Added to List of Nations Targeted in Salt Typhoon Telecom Spree
+IBM Pushes for More Collaboration Between Security, Governance
+How the US Military Is Redefining Zero Trust
+️ Stop API Key Leaks Before They Cost You — Meet KeySentry
+80% of Phishing Clues Are in the Header, PhishHound Finds Them with YAML Logic
+AI closing the loop, CTI to Simulations and hunting
+How an OAuth Misconfiguration Led to Token Leakage
+How to Write a Perfect Bug Bounty Report (with Examples)
+Inside the MSHTML Exploit: A SOC Analyst’s Walkthrough of CVE-2021–40444
+Lost and Found: How Deleted User Accounts Were Still Alive in the System ️
+The Dark Side of Swagger UI: How XSS and HTML Injection Can Compromise APIs
+WebSocket Attacks — The protocol that dances under your security radar (POC inside)
+What is TTL (Time To Live)?
+CyberheistNews Vol 15 #25 Microsoft & KnowBe4 Collab: Strengthen Email Security Through Strategic Integration
+New FileFix attack weaponizes Windows File Explorer for stealthy commands
+US House bans WhatsApp on staff devices over security concerns
+APT28 Uses Signal Chat to Deploy BEARDSHELL Malware and COVENANT in Ukraine
+Between Buzz and Reality: The CTEM Conversation We All Need
+Hackers Exploit Misconfigured Docker APIs to Mine Cryptocurrency via Tor Network
+Hackers Target Over 70 Microsoft Exchange Servers to Steal Credentials via Keyloggers
+Researchers Find Way to Shut Down Cryptominer Campaigns Using Bad Shares and XMRogue
+U.S. House Bans WhatsApp on Official Devices Over Security and Data Protection Issues
+Critical Convoy Flaw Allows Remote Code Execution on Servers
+EagleSpy v5 RAT Promoted by Hacker for Stealthy Android Access
+Gonjeshke Darande Hackers Pose as Activists to Infiltrate Iranian Crypto Exchange
+Google Cloud Donates A2A Protocol to Linux Foundation for Smarter, Secure Communication
+NCSC Warns of SHOE RACK Malware Targeting Fortinet Firewalls via DOH & SSH Protocols
+OPPO Clone Phone Vulnerability Leaks Sensitive Data via Weak WiFi Hotspot
+Over 2,000 Devices Compromised by Weaponized Social Security Statement Phishing Attacks
+Threat Actors Exploit ConnectWise Configuration to Create Signed Malware
+Weaponized DMV-Themed Phishing Scam Targets U.S. Citizens to Steal Personal and Financial Data
+Zimbra Classic Web Client Vulnerability Allows Arbitrary JavaScript Execution
+Cyber threat bulletin: People's Republic of China cyber threat activity: PRC cyber actors target telecommunications companies as part of a global cyberespionage campaign
+Threat Hunting Introduction: Cobalt Strike
+Famous Chollima’s PylangGhost
+Checking all the Boxes: LapDogs, The New ORB in Town
+Cobalt Strike Operators Leverage PowerShell Loaders Across Chinese, Russian, and Global Infrastructure
+2025 Cyber Threat Intelligence Report
+Bluenoroff (APT38) Live Infrastructure Hunting
+Application and API Security Can’t Rely Solely on Perimeter Defenses or Scanners | Notes on Gartner AppSec Research | Contrast Security
+New DRAT V2 Update Enhances C2 Protocol with Shell Command Execution Capabilities
+FBI cyber leader: US can’t forget about China's 'Typhoon' groups amid Mideast conflict
+Understanding DevSecOps
+Microsoft is named a Leader in The Forrester Wave™: Security Analytics Platforms, 2025​​
+Anton’s Security Blog Quarterly Q2 2025
+WhatsApp BANNED by House Security Goons — But Why?
+Microsoft fixes known issue that breaks Windows 11 updates
+Windows 10 users can get extended security updates using Microsoft points
+Trezor’s support platform abused in crypto theft phishing attacks
+Bank of America, Netflix, and Microsoft Hacked to Inject Fake Phone Numbers
+CVE-2025-47165 - Microsoft Excel LTSC Professional Pilus 2021 Remote Code Execution
+Windows 10 KB5061087 update released with 13 changes and fixes
+Leak of data belonging to 7.4 million Paraguayans traced back to infostealers
+Steel Giant Nucor Confirms Data Stolen in Cyberattack
+New U.S. Visa Rule Requires Applicants to Set Social Media Account Privacy to Public
+caldine
+Scherzinger
+gouverneur.com
+mlderm.com
+mccn.org
+hy-vee.com
+Avantic Medical Lab
+LinuxFest Northwest: Maximizing AI Potential Optimization Techniques for Smarter Faster Systems
+Black Hat SEO Poisoning Search Engine Results For AI to Distribute Malware
+How Sonatype leads in AI component analysis for supply chain security
+LinuxFest Northwest: GNU/Linux Loves All
+Maximize ROI from Your CrowdStrike Deployment
+Why Every File Demands Sanitization
+China-Nexus 'LapDogs' Network Thrives on Backdoored SOHO Devices
+SonicWall warns of trojanized NetExtender stealing VPN logins
+Fishman, Larsen & Callister
+Katz & Doorakian Law Firm, P.L.
+PeopleCheck
+Arlington Occupational Health and Wellness
+Inflite Engineering Services
+Lexington & Richland County School District Five
+Myrtue Medical Center Hospital
+Access Financial
+Seppeler Gruppe
+motorsport-de-la-capitale
+lurie-glass
+www.covenanthealth.net
+VS Associates
+Datrose
+Integrity Mortgage
+Keystone Shipping
+hawaiiunified.com
+sbh
+The Lowell Hotel New York
+Google Cloud donates A2A AI protocol to the Linux Foundation
+Threat Actor Trojanizes Copy of SonicWall NetExtender VPN App
+Claude catches up to ChatGPT with built-in memory support
+Google rolls out text-to-image model Imagen 4 for free
